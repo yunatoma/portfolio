@@ -2,32 +2,40 @@ import { FadeIn } from "@/components/FadeIn";
 import { projects } from "@/data/projects";
 
 const skills = {
-  Frontend: ["TypeScript", "React", "Next.js", "Vue.js", "Tailwind CSS"],
-  Backend: ["Java", "Spring Boot"],
-  Tools: ["Git", "GitHub", "GitLab", "Docker", "CI/CD"],
-  "AI Tools": ["Claude Code", "Codex"],
+  Frontend: ["TypeScript", "Vue.js", "React", "Next.js", "Nuxt.js", "Astro", "Tailwind CSS"],
+  Backend: ["Java", "Spring Boot", "Python"],
+  Tools: ["Git", "GitLab", "GitHub", "Docker", "CI/CD (GitLab CI)"],
+  Design: ["Figma", "Photoshop", "Illustrator", "WordPress", "Studio"],
 };
 
 const timeline = [
   {
-    period: "2023 - 現在",
-    role: "フロントエンドエンジニア",
-    place: "Web系スタートアップ",
+    period: "2025年10月〜現在",
+    role: "エンジニア育成スクール 講師（副業）",
+    place: "Web制作会社",
     description:
-      "React / TypeScript / Next.js を用いたプロダクト開発。UI実装、機能改修、不具合調査を担当。",
+      "未経験〜初級者を対象とした技術指導・カリキュラム設計・学習進捗管理。実戦的なコードレビューやモチベーション管理を含む多角的なサポートを担当。",
   },
   {
-    period: "2021 - 2023",
-    role: "システムエンジニア",
-    place: "SIer企業",
+    period: "2025年8月〜2026年3月",
+    role: "フロントエンドエンジニア（業務委託）",
+    place: "建設DX系スタートアップ（業務委託）",
     description:
-      "Java / Spring Boot を用いた業務系システム開発。設計・実装・テスト・ドキュメント整備に従事。",
+      "建設・設計業務の生産性向上を目的としたバーティカルSaaSの開発。Vue.jsによる新規画面実装・既存機能改修・不具合調査に加え、Claude CodeなどAI開発支援ツールを活用した効率化を推進。",
   },
   {
-    period: "2017 - 2021",
-    role: "情報工学部 卒業",
-    place: "〇〇大学",
-    description: "プログラミング・アルゴリズム・データベースなどを学ぶ。",
+    period: "2023年4月〜2025年8月",
+    role: "フロントエンドエンジニア（正社員）",
+    place: "AI・IoT系SaaS企業（正社員）",
+    description:
+      "農業用ドローン散布DXプラットフォームの開発。Java / Spring Bootによるバックエンド設計・実装と、TypeScript / Vue.jsによるフロントエンド開発を担当。CI/CDパイプライン（GitLab CI）の整備や開発基準のドキュメント化にも従事。",
+  },
+  {
+    period: "2021年3月〜2023年3月",
+    role: "システムエンジニア（アルバイト）",
+    place: "AI・IoT系SaaS企業（アルバイト）",
+    description:
+      "LiDARセンサーを用いた3次元測量アプリおよびWebシステムの開発。TypeScript / Vue.js / Java / Spring Bootを使用し、画面実装からAPIバックエンドまで幅広く担当。",
   },
 ];
 
@@ -42,19 +50,18 @@ export default function Home() {
         <div className="mx-auto max-w-5xl w-full flex flex-col md:flex-row items-center gap-12 relative">
           <div className="flex-1">
             <p className="mb-3 text-sm font-semibold tracking-widest text-pink-400 uppercase">
-              Frontend Engineer Portfolio
+              Frontend Engineer
             </p>
-            <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl text-gray-800">
-              ユーザーにとって
-              <br />
-              使いやすいWebを
-              <br />
-              <span className="text-pink-500">つくるエンジニア</span>
+            <h1 className="mb-4 text-4xl font-bold leading-tight md:text-5xl text-gray-800">
+              青木 由奈
             </h1>
+            <p className="mb-6 text-lg text-pink-500 font-medium">
+              フロントエンドエンジニア / フリーランス
+            </p>
             <p className="mb-8 max-w-lg text-gray-500 leading-relaxed">
-              TypeScript・React・Next.js・Vue.jsを中心に、
-              フロントエンド開発を行っています。
-              UI実装から既存機能改修、不具合調査、ドキュメント整備まで対応します。
+              TypeScript・Vue.jsを中心に、設計から実装・テストまで一貫して対応。
+              Java / Spring Bootによるバックエンド開発やCI/CD環境の整備など、
+              プロダクト全体を見ながら柔軟に対応できるエンジニアです。
             </p>
             <div className="flex gap-4 flex-wrap">
               <a
@@ -72,7 +79,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Decorative illustration */}
           <div className="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 relative">
             <div className="w-full h-full rounded-full bg-gradient-to-br from-pink-200 to-pink-400 opacity-30" />
             <div className="absolute inset-8 rounded-full bg-gradient-to-br from-pink-300 to-pink-500 opacity-40" />
@@ -91,14 +97,17 @@ export default function Home() {
             <h2 className="mb-8 text-3xl font-bold text-gray-800">私について</h2>
             <div className="max-w-2xl space-y-4 text-gray-600 leading-relaxed">
               <p>
-                フロントエンド開発を中心に、Webアプリケーション開発に携わっています。
-                TypeScript・Vue.js・React・Next.jsを用いた画面実装や、
-                既存機能の改修、不具合調査、UI改善などを行っています。
+                フロントエンド開発を中心に、設計から実装・テストまで一貫して対応できる実装力と、
+                チーム全体が開発しやすくなるよう改善していく姿勢を強みとしています。
               </p>
               <p>
-                チーム開発におけるドキュメント整備や、GitHub / GitLabを用いた
-                コードレビューにも関わってきました。
-                ユーザー視点を大切にしながら、読みやすくメンテナブルなコードを心がけています。
+                これまで画面実装や既存機能の改善、不具合調査、CI/CD環境の整備など、
+                ユーザーが使いやすい画面づくりを意識して開発に取り組んできました。
+                必要に応じてバックエンド開発にも携わり、プロダクト全体を見ながら柔軟に対応しています。
+              </p>
+              <p>
+                また、副業としてエンジニア育成スクールの講師も務めており、
+                未経験者から初級者への技術指導・カリキュラム設計を担当しています。
               </p>
             </div>
           </FadeIn>
@@ -231,24 +240,24 @@ export default function Home() {
               お仕事のご相談やご連絡は、以下よりお願いいたします。
             </p>
           </FadeIn>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
             <FadeIn delay={0}>
               <a
-                href="mailto:your-email@example.com"
+                href="mailto:yuna.aoki.web@gmail.com"
                 className="flex items-center gap-3 rounded-2xl border border-pink-200 bg-white px-6 py-5 hover:bg-pink-50 transition-colors group"
               >
                 <span className="text-2xl">✉️</span>
                 <div>
                   <p className="text-xs text-gray-400 mb-0.5">Email</p>
                   <p className="text-sm font-semibold text-gray-700 group-hover:text-pink-600">
-                    your-email@example.com
+                    yuna.aoki.web@gmail.com
                   </p>
                 </div>
               </a>
             </FadeIn>
             <FadeIn delay={80}>
               <a
-                href="https://github.com/your-name"
+                href="https://github.com/yunatoma"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-3 rounded-2xl border border-pink-200 bg-white px-6 py-5 hover:bg-pink-50 transition-colors group"
@@ -257,23 +266,7 @@ export default function Home() {
                 <div>
                   <p className="text-xs text-gray-400 mb-0.5">GitHub</p>
                   <p className="text-sm font-semibold text-gray-700 group-hover:text-pink-600">
-                    github.com/your-name
-                  </p>
-                </div>
-              </a>
-            </FadeIn>
-            <FadeIn delay={160}>
-              <a
-                href="https://x.com/your-name"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-3 rounded-2xl border border-pink-200 bg-white px-6 py-5 hover:bg-pink-50 transition-colors group"
-              >
-                <span className="text-2xl">🐦</span>
-                <div>
-                  <p className="text-xs text-gray-400 mb-0.5">X (Twitter)</p>
-                  <p className="text-sm font-semibold text-gray-700 group-hover:text-pink-600">
-                    @your-name
+                    github.com/yunatoma
                   </p>
                 </div>
               </a>
