@@ -34,7 +34,7 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-pink-100">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <Link href="/" className="text-lg font-bold text-pink-500">
-          Portfolio
+          Yuna Web Studio
         </Link>
 
         <nav className="hidden md:flex gap-8 text-sm font-medium">

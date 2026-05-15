@@ -6,9 +6,9 @@ import { Footer } from "@/components/Footer";
 import { LoadingScreen } from "@/components/LoadingScreen";
 
 export const metadata: Metadata = {
-  title: "青木 由奈 | Portfolio",
+  title: "Yuna Web Studio | Portfolio",
   description:
-    "フロントエンドエンジニア 青木由奈のポートフォリオサイトです。TypeScript・Vue.js・React・Next.jsを中心に、設計から実装まで一貫して対応します。",
+    "フロントエンドエンジニア Yuna Web Studioのポートフォリオサイトです。TypeScript・Vue.js・React・Next.jsを中心に、設計から実装まで一貫して対応します。",
 };
 
 export default function RootLayout({

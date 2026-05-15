@@ -55,7 +55,7 @@ export const LoadingScreen = () => {
           <p className="mb-1 text-[10px] font-bold tracking-widest text-pink-300 uppercase">
             Portfolio
           </p>
-          <p className="text-xl font-bold text-gray-700">青木 由奈</p>
+          <p className="text-xl font-bold text-gray-700">Yuna Web Studio</p>
         </div>
 
         {/* Bouncing dots */}

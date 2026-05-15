@@ -115,7 +115,7 @@ export default async function Home() {
             </div>
 
             <h1 className="animate-hero-enter mb-4 text-5xl font-bold leading-tight md:text-6xl text-gray-800" style={{ animationDelay: "200ms" }}>
-              青木 由奈
+              Yuna Web Studio
             </h1>
             <p className="animate-hero-enter mb-6 text-lg font-medium text-pink-400" style={{ animationDelay: "300ms" }}>
               フロントエンドエンジニア / フリーランス
