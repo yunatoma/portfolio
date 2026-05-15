@@ -21,7 +21,7 @@ export const Header = () => {
             Skills
           </a>
           <a href="#timeline" className="text-gray-600 hover:text-pink-500 transition-colors">
-            経歴
+            Experience
           </a>
           <a href="#projects" className="text-gray-600 hover:text-pink-500 transition-colors">
             Projects
@@ -51,7 +51,7 @@ export const Header = () => {
               className="text-gray-600 hover:text-pink-500 transition-colors capitalize"
               onClick={() => setMenuOpen(false)}
             >
-              {id === "timeline" ? "経歴" : id.charAt(0).toUpperCase() + id.slice(1)}
+              {id === "timeline" ? "Experience" : id.charAt(0).toUpperCase() + id.slice(1)}
             </a>
           ))}
         </div>
