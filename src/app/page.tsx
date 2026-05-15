@@ -1,6 +1,38 @@
 import { FadeIn } from "@/components/FadeIn";
 import { projects } from "@/data/projects";
 
+type ZennArticle = {
+  slug: string;
+  title: string;
+  emoji: string;
+  article_type: "tech" | "idea";
+  liked_count: number;
+  published_at: string;
+  path: string;
+};
+
+async function fetchZennArticles(): Promise<ZennArticle[]> {
+  try {
+    const res = await fetch(
+      "https://zenn.dev/api/articles?username=yuna_aoki&order=latest&count=6",
+      { next: { revalidate: 3600 } }
+    );
+    if (!res.ok) return [];
+    const data = await res.json();
+    return data.articles ?? [];
+  } catch {
+    return [];
+  }
+}
+
+function formatDate(iso: string) {
+  return new Date(iso).toLocaleDateString("ja-JP", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 const skills = {
   Frontend: ["TypeScript", "Vue.js", "React", "Next.js", "Nuxt.js", "Astro", "Tailwind CSS"],
   Backend: ["Java", "Spring Boot", "Python"],
@@ -51,7 +83,8 @@ function SectionLabel({ label, title }: { label: string; title: string }) {
   );
 }
 
-export default function Home() {
+export default async function Home() {
+  const articles = await fetchZennArticles();
   return (
     <>
       {/* ── Hero ── */}
@@ -274,6 +307,62 @@ export default function Home() {
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Articles ── */}
+      <section id="articles" className="py-24 px-6 bg-white">
+        <div className="mx-auto max-w-5xl">
+          <FadeIn>
+            <SectionLabel label="Articles" title="記事" />
+            <p className="-mt-6 mb-10 text-gray-400">
+              Zennで書いた技術記事です。
+            </p>
+          </FadeIn>
+          {articles.length === 0 ? (
+            <p className="text-gray-400 text-sm">記事を取得できませんでした。</p>
+          ) : (
+            <div className="grid gap-5 md:grid-cols-2">
+              {articles.map((article, i) => (
+                <FadeIn key={article.slug} delay={i * 70}>
+                  <a
+                    href={`https://zenn.dev${article.path}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group flex gap-4 rounded-2xl border border-pink-100 bg-white/80 p-5 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-100"
+                  >
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-pink-50 text-2xl">
+                      {article.emoji}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="mb-1 line-clamp-2 text-sm font-semibold leading-snug text-gray-800 transition-colors group-hover:text-pink-600">
+                        {article.title}
+                      </p>
+                      <div className="flex items-center gap-3 text-xs text-gray-400">
+                        <span>{formatDate(article.published_at)}</span>
+                        <span>❤ {article.liked_count}</span>
+                        <span className="rounded-full border border-pink-200 bg-pink-50 px-2 py-0.5 text-pink-600">
+                          {article.article_type === "tech" ? "Tech" : "Idea"}
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </FadeIn>
+              ))}
+            </div>
+          )}
+          <FadeIn delay={articles.length * 70}>
+            <div className="mt-8 text-center">
+              <a
+                href="https://zenn.dev/yuna_aoki"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-pink-300 px-6 py-2.5 text-sm font-semibold text-pink-500 transition-all hover:bg-pink-50 hover:-translate-y-0.5"
+              >
+                Zennでもっと見る →
+              </a>
+            </div>
+          </FadeIn>
         </div>
       </section>
 

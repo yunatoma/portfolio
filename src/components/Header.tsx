@@ -26,6 +26,9 @@ export const Header = () => {
           <a href="#projects" className="text-gray-600 hover:text-pink-500 transition-colors">
             Projects
           </a>
+          <a href="#articles" className="text-gray-600 hover:text-pink-500 transition-colors">
+            Articles
+          </a>
           <a href="#contact" className="text-gray-600 hover:text-pink-500 transition-colors">
             Contact
           </a>
@@ -44,7 +47,7 @@ export const Header = () => {
 
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-pink-100 px-6 py-4 flex flex-col gap-4 text-sm font-medium">
-          {["about", "skills", "timeline", "projects", "contact"].map((id) => (
+          {["about", "skills", "timeline", "projects", "articles", "contact"].map((id) => (
             <a
               key={id}
               href={`#${id}`}
