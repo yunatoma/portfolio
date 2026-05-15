@@ -13,6 +13,9 @@ export const FadeIn = ({ children, className = "", delay = 0 }: FadeInProps) => 
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -20,11 +23,20 @@ export const FadeIn = ({ children, className = "", delay = 0 }: FadeInProps) => 
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0.12,
+        // 少し手前でトリガー → スクロールしてすぐ表示開始
+        rootMargin: "0px 0px -48px 0px",
+      }
     );
 
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+    // 初期非表示状態がブラウザに描画された後に監視開始
+    const timer = setTimeout(() => observer.observe(el), 60);
+
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -33,8 +45,9 @@ export const FadeIn = ({ children, className = "", delay = 0 }: FadeInProps) => 
       className={className}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(28px)",
-        transition: `opacity 0.7s ease-out ${delay}ms, transform 0.7s ease-out ${delay}ms`,
+        transform: visible ? "translateY(0) scale(1)" : "translateY(36px) scale(0.97)",
+        transition: `opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
+        willChange: "opacity, transform",
       }}
     >
       {children}
