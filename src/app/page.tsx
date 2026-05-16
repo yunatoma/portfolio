@@ -49,25 +49,25 @@ const timeline = [
       "未経験〜初級者を対象とした技術指導・カリキュラム設計・学習進捗管理。実戦的なコードレビューやモチベーション管理を含む多角的なサポートを担当。",
   },
   {
-    period: "2025年8月〜2026年3月",
+    period: "2025年12月〜2026年3月",
     role: "フロントエンドエンジニア（業務委託）",
-    place: "建設DX系スタートアップ",
+    place: "建設DX系コンサル",
     description:
       "建設・設計業務の生産性向上を目的としたバーティカルSaaSの開発。Vue.jsによる新規画面実装・既存機能改修・不具合調査に加え、Claude CodeなどAI開発支援ツールを活用した効率化を推進。",
   },
   {
     period: "2023年4月〜2025年8月",
-    role: "フロントエンドエンジニア（正社員）",
+    role: "フルスタックエンジニア（正社員）",
     place: "AI・IoT系SaaS企業",
     description:
       "農業用ドローン散布DXプラットフォームの開発。Java / Spring Bootによるバックエンド設計・実装と、TypeScript / Vue.jsによるフロントエンド開発を担当。CI/CDパイプライン（GitLab CI）の整備や開発基準のドキュメント化にも従事。",
   },
   {
     period: "2021年3月〜2023年3月",
-    role: "システムエンジニア（アルバイト）",
+    role: "エンジニア（アルバイト）",
     place: "AI・IoT系SaaS企業",
     description:
-      "LiDARセンサーを用いた3次元測量アプリおよびWebシステムの開発。TypeScript / Vue.js / Java / Spring Bootを使用し、画面実装からAPIバックエンドまで幅広く担当。",
+      "LiDARセンサーを用いた3次元測量アプリおよびWebシステムの開発・検証に従事。TypeScript / Vue.js / Java / Spring Bootを使用し、画面実装からAPIバックエンド開発、動作検証まで幅広く担当。",
   },
 ];
 
@@ -121,9 +121,9 @@ export default async function Home() {
               フロントエンドエンジニア / フリーランス
             </p>
             <p className="animate-hero-enter mb-10 max-w-lg text-gray-500 leading-relaxed" style={{ animationDelay: "400ms" }}>
-              TypeScript・Vue.jsを中心に、設計から実装・テストまで一貫して対応。
-              Java / Spring Bootによるバックエンド開発やCI/CD環境の整備など、
-              プロダクト全体を見ながら柔軟に対応できるエンジニアです。
+              TypeScript・Vue.jsを中心に約4年の実務経験を持ち、設計から実装・テストまで対応。
+              AIツールを活用した効率的な開発フローも取り入れながら、
+              丁寧で確実な開発を通じて、チームとプロダクトに貢献するエンジニアです。
             </p>
             <div className="animate-hero-enter flex gap-4 flex-wrap" style={{ animationDelay: "500ms" }}>
               <a

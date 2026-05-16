@@ -16,13 +16,6 @@ export const projects: Project[] = [
     demoUrl: "https://example.com",
   },
   {
-    title: "旅行記録アプリ",
-    description:
-      "旅行先や思い出を記録できるWebアプリです。Next.jsの学習を兼ねて作成しました。",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    githubUrl: "https://github.com/your-name/travel-app",
-  },
-  {
     title: "ポートフォリオサイト",
     description:
       "Next.js、TypeScript、Tailwind CSSを使用して作成したポートフォリオサイトです。",
