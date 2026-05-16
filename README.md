@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yuna Web Studio Portfolio
 
-## Getting Started
+Yuna Web Studio のポートフォリオサイトです。
 
-First, run the development server:
+フロントエンド開発を中心としたスキル、経歴、制作物、技術記事、連絡先を掲載しています。
+
+## 使用技術
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- ESLint
+
+## 主な内容
+
+- プロフィール
+- スキル一覧
+- 経歴
+- 制作物
+- Zenn 記事一覧
+- お問い合わせリンク
+
+## セットアップ
+
+依存関係をインストールします。
+
+```bash
+npm install
+```
+
+開発サーバーを起動します。
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで以下の URL を開くと確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## コマンド
 
-## Learn More
+```bash
+# 開発サーバーを起動
+npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+# 本番用ビルドを作成
+npm run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 本番ビルドを起動
+npm run start
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# ESLint を実行
+npm run lint
+```
 
-## Deploy on Vercel
+## ディレクトリ構成
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+src/
+  app/          ページ、レイアウト、グローバル CSS
+  components/   共通コンポーネント
+  data/         制作物などの表示データ
+public/         静的ファイル
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 関連リンク
+
+- [ポートフォリオサイト](https://yuna-design0.studio.site/)
+- [Zenn](https://zenn.dev/yuna_aoki)
+- [GitHub](https://github.com/yunatoma)
