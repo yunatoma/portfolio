@@ -110,7 +110,7 @@ export default async function Home() {
             <div className="animate-hero-enter mb-5 inline-flex items-center gap-2 rounded-full bg-white/80 border border-pink-200 px-4 py-1.5 shadow-sm" style={{ animationDelay: "100ms" }}>
               <span className="animate-blink h-1.5 w-1.5 rounded-full bg-pink-400" />
               <span className="text-xs font-semibold tracking-widest text-pink-500 uppercase">
-                Frontend Engineer
+                Engineer
               </span>
             </div>
 
@@ -118,7 +118,7 @@ export default async function Home() {
               Yuna Web Studio
             </h1>
             <p className="animate-hero-enter mb-6 text-lg font-medium text-pink-400" style={{ animationDelay: "300ms" }}>
-              フロントエンドエンジニア / フリーランス
+              エンジニア / フリーランス
             </p>
             <p className="animate-hero-enter mb-10 max-w-lg text-gray-500 leading-relaxed" style={{ animationDelay: "400ms" }}>
               TypeScript・Vue.jsを中心に約4年の実務経験を持ち、設計から実装・テストまで対応。
