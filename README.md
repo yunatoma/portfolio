@@ -1,5 +1,7 @@
 # Yuna Web Studio Portfolio
 
+公開 URL: https://portfolio-chi-eosin-43.vercel.app/
+
 Yuna Web Studio のポートフォリオサイトです。
 
 フロントエンド開発を中心としたスキル、経歴、制作物、技術記事、連絡先を掲載しています。
@@ -66,9 +68,3 @@ src/
   data/         制作物などの表示データ
 public/         静的ファイル
 ```
-
-## 関連リンク
-
-- [ポートフォリオサイト](https://yuna-design0.studio.site/)
-- [Zenn](https://zenn.dev/yuna_aoki)
-- [GitHub](https://github.com/yunatoma)
