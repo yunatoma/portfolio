@@ -211,6 +211,16 @@ export default async function Home() {
                       </span>
                     ))}
                   </div>
+                  {category === "Design" && (
+                    <a
+                      href="https://yuna-design0.studio.site/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-5 inline-flex text-sm font-semibold text-pink-400 transition-colors hover:text-pink-600"
+                    >
+                      Webデザイナーとしても活動中です →
+                    </a>
+                  )}
                 </div>
               </FadeIn>
             ))}
