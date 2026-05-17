@@ -44,6 +44,10 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             Demo
           </a>
         )}
+
+        {project.demoStatus === "preparing" && (
+          <span className="text-gray-400">Demo 準備中</span>
+        )}
       </div>
     </article>
   );
