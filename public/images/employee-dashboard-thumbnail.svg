@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Employee management app dashboard thumbnail</title>
+  <desc id="desc">Dark dashboard screen with anonymized user name.</desc>
+  <defs><linearGradient id="logo" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="#020617"/><rect width="214" height="900" fill="#0f172a"/><rect x="214" width="1386" height="56" fill="#0f172a"/><line x1="214" y1="0" x2="214" y2="900" stroke="#1e293b"/><line x1="214" y1="56" x2="1600" y2="56" stroke="#1e293b"/>
+  <path d="M16 18h22l-9 15h18l-28 29 8-22H12z" fill="url(#logo)"/><text x="43" y="36" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="800">株式会社サンプル1</text><text x="242" y="36" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="800">ダッシュボード</text><circle cx="1474" cy="28" r="13" fill="#0369a1"/><text x="1469" y="33" fill="#67e8f9" font-family="Arial, sans-serif" font-size="13" font-weight="800">ユ</text><text x="1495" y="33" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="13" font-weight="700">ユーザー</text>
+  <g font-family="Arial, sans-serif" font-size="13"><text x="18" y="82" fill="#64748b">メニュー</text><rect x="8" y="94" width="198" height="36" rx="7" fill="#083344" stroke="#0ea5e9" stroke-width="2"/><text x="42" y="118" fill="#22d3ee" font-weight="800">ダッシュボード</text><text x="42" y="152" fill="#94a3b8">社員一覧</text><text x="42" y="186" fill="#94a3b8">組織図</text><text x="42" y="220" fill="#94a3b8">マイプロフィール</text><text x="42" y="254" fill="#94a3b8">社員を登録する</text><text x="42" y="288" fill="#94a3b8">申請管理</text><text x="42" y="322" fill="#94a3b8">マスタ設定</text></g>
+  <g transform="translate(254 100)" font-family="Arial, sans-serif"><text x="0" y="0" fill="#ffffff" font-size="24" font-weight="800">ダッシュボード</text><text x="0" y="28" fill="#94a3b8" font-size="14">在籍中の社員のみを集計しています</text></g>
+  <g transform="translate(254 150)" font-family="Arial, sans-serif">
+    <rect width="430" height="102" rx="12" fill="#0ea5e9"/><text x="24" y="36" fill="#ffffff" font-size="14" font-weight="700">在籍社員数</text><text x="24" y="78" fill="#ffffff" font-size="32" font-weight="900">56</text>
+    <rect x="446" width="430" height="102" rx="12" fill="#0f172a" stroke="#1e293b"/><text x="470" y="36" fill="#94a3b8" font-size="14" font-weight="700">稼働中</text><text x="470" y="78" fill="#ffffff" font-size="32" font-weight="900">53</text>
+    <rect x="892" width="430" height="102" rx="12" fill="#0f172a" stroke="#1e293b"/><text x="916" y="36" fill="#94a3b8" font-size="14" font-weight="700">休業中</text><text x="916" y="78" fill="#ffffff" font-size="32" font-weight="900">3</text>
+    <rect y="122" width="652" height="320" rx="12" fill="#0f172a" stroke="#1e293b"/><text x="24" y="158" fill="#ffffff" font-size="14" font-weight="800">ステータス内訳</text>
+    <circle cx="326" cy="255" r="70" fill="none" stroke="#10b981" stroke-width="26"/><path d="M396 255a70 70 0 0 1 -8 32" fill="none" stroke="#f59e0b" stroke-width="26"/>
+    <text x="278" y="360" fill="#10b981" font-size="12">● 稼働中</text><text x="360" y="360" fill="#f59e0b" font-size="12">● 休業中</text>
+    <rect x="666" y="122" width="656" height="320" rx="12" fill="#0f172a" stroke="#1e293b"/><text x="690" y="158" fill="#ffffff" font-size="14" font-weight="800">部署別社員数</text>
+    <g fill="#0ea5e9"><rect x="822" y="184" width="390" height="22" rx="4"/><rect x="822" y="218" width="334" height="22" rx="4" opacity=".85"/><rect x="822" y="252" width="196" height="22" rx="4" opacity=".7"/><rect x="822" y="286" width="196" height="22" rx="4" opacity=".7"/><rect x="822" y="320" width="168" height="22" rx="4" opacity=".6"/></g>
+    <g fill="#94a3b8" font-size="12"><text x="730" y="200">営業部</text><text x="730" y="234">開発部</text><text x="682" y="268">カスタマーサポート部</text><text x="710" y="302">マーケティング部</text><text x="742" y="336">人事部</text></g>
+    <rect y="464" width="1322" height="320" rx="12" fill="#0f172a" stroke="#1e293b"/><text x="24" y="500" fill="#ffffff" font-size="14" font-weight="800">スキル別人数 TOP10</text>
+    <g fill="#818cf8"><rect x="136" y="532" width="1066" height="22" rx="4"/><rect x="136" y="566" width="282" height="22" rx="4"/><rect x="136" y="600" width="220" height="22" rx="4"/><rect x="136" y="634" width="188" height="22" rx="4"/><rect x="136" y="668" width="188" height="22" rx="4"/></g>
+  </g>
+</svg>

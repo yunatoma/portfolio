@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   title: "Yuna Web Studio | Portfolio",
   description:
     "フロントエンドエンジニア Yuna Web Studioのポートフォリオサイトです。TypeScript・Vue.js・React・Next.jsを中心に、設計から実装まで一貫して対応します。",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
 };
 
 export default function RootLayout({

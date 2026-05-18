@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio articles section thumbnail</title>
+  <desc id="desc">A portfolio articles section with Zenn article cards.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#f9a8d4" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="#ffffff"/>
+  <rect width="1600" height="56" fill="#ffffff"/>
+  <line x1="0" y1="56" x2="1600" y2="56" stroke="#fce7f3"/>
+  <text x="364" y="36" fill="#ec4899" font-family="Arial, sans-serif" font-size="20" font-weight="700">Yuna Web Studio</text>
+  <g fill="#475569" font-family="Arial, sans-serif" font-size="14" font-weight="700">
+    <text x="850" y="36">About</text><text x="918" y="36">Skills</text><text x="990" y="36">Experience</text><text x="1094" y="36">Projects</text><text x="1180" y="36">Articles</text><text x="1260" y="36">Contact</text>
+  </g>
+  <g transform="translate(344 132)" font-family="Arial, sans-serif">
+    <line x1="0" y1="8" x2="32" y2="8" stroke="#f472b6"/>
+    <text x="44" y="13" fill="#ec4899" font-size="13" font-weight="800" letter-spacing="2">ARTICLES</text>
+    <text x="0" y="58" fill="#1f2937" font-size="34" font-weight="800">記事</text>
+    <text x="0" y="96" fill="#94a3b8" font-size="16" font-weight="700">Zennで書いた技術記事です。</text>
+  </g>
+  <g transform="translate(344 276)" font-family="Arial, sans-serif" filter="url(#shadow)">
+    <g>
+      <rect width="446" height="96" rx="14" fill="#ffffff" stroke="#fce7f3"/>
+      <rect x="22" y="24" width="42" height="42" rx="10" fill="#fff1f5"/>
+      <text x="34" y="51" font-size="20">🤗</text>
+      <text x="82" y="42" fill="#1f2937" font-size="15" font-weight="800">Next.js + TypeScript + Tailwind CSSで</text>
+      <text x="82" y="64" fill="#1f2937" font-size="15" font-weight="800">エンジニア用ポートフォリオを作る</text>
+    </g>
+    <g transform="translate(466 0)">
+      <rect width="446" height="96" rx="14" fill="#ffffff" stroke="#fce7f3"/>
+      <rect x="22" y="24" width="42" height="42" rx="10" fill="#fff1f5"/>
+      <text x="34" y="51" font-size="20">🙄</text>
+      <text x="82" y="42" fill="#1f2937" font-size="15" font-weight="800">React x TypeScript x Redux Toolkitで</text>
+      <text x="82" y="64" fill="#1f2937" font-size="15" font-weight="800">人材管理SaaS風アプリを作る</text>
+    </g>
+    <g transform="translate(0 124)">
+      <rect width="446" height="96" rx="14" fill="#ffffff" stroke="#fce7f3"/>
+      <rect x="22" y="24" width="42" height="42" rx="10" fill="#fff1f5"/>
+      <text x="34" y="51" font-size="20">🙌</text>
+      <text x="82" y="52" fill="#1f2937" font-size="15" font-weight="800">Claude CodeでSkillsを導入する</text>
+    </g>
+    <g transform="translate(466 124)">
+      <rect width="446" height="96" rx="14" fill="#ffffff" stroke="#fce7f3"/>
+      <rect x="22" y="24" width="42" height="42" rx="10" fill="#fff1f5"/>
+      <text x="34" y="51" font-size="20">📚</text>
+      <text x="82" y="42" fill="#1f2937" font-size="15" font-weight="800">React x TypeScript x Redux Toolkitで</text>
+      <text x="82" y="64" fill="#1f2937" font-size="15" font-weight="800">人材管理SaaS風アプリを作る2</text>
+    </g>
+    <g transform="translate(0 248)">
+      <rect width="446" height="96" rx="14" fill="#ffffff" stroke="#fce7f3"/>
+      <rect x="22" y="24" width="42" height="42" rx="10" fill="#fff1f5"/>
+      <text x="34" y="51" font-size="20">📝</text>
+      <text x="82" y="52" fill="#ec4899" font-size="15" font-weight="800">Skillsを使ったレビュー環境を考える</text>
+    </g>
+    <g transform="translate(466 248)">
+      <rect width="446" height="96" rx="14" fill="#ffffff" stroke="#fce7f3"/>
+      <rect x="22" y="24" width="42" height="42" rx="10" fill="#fff1f5"/>
+      <text x="34" y="51" font-size="20">👏</text>
+      <text x="82" y="42" fill="#1f2937" font-size="15" font-weight="800">React x TypeScript x Redux Toolkitで</text>
+      <text x="82" y="64" fill="#1f2937" font-size="15" font-weight="800">人材管理SaaS風アプリを作る1</text>
+    </g>
+  </g>
+  <rect x="716" y="690" width="168" height="38" rx="19" fill="#ffffff" stroke="#f472b6"/>
+  <text x="738" y="714" fill="#ec4899" font-family="Arial, sans-serif" font-size="14" font-weight="800">Zennでもっと見る →</text>
+</svg>

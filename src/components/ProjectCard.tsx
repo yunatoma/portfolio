@@ -1,4 +1,5 @@
 import type { Project } from "@/data/projects";
+import { ProjectThumbnailCarousel } from "@/components/ProjectThumbnailCarousel";
 
 type ProjectCardProps = {
   project: Project;
@@ -6,7 +7,11 @@ type ProjectCardProps = {
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <article className="rounded-xl border border-gray-200 p-6">
+    <article className="overflow-hidden rounded-xl border border-gray-200 p-6">
+      {project.thumbnails && (
+        <ProjectThumbnailCarousel thumbnails={project.thumbnails} />
+      )}
+
       <h2 className="mb-3 text-xl font-bold">{project.title}</h2>
 
       <p className="mb-4 text-gray-600">{project.description}</p>
@@ -34,6 +39,17 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           </a>
         )}
 
+        {project.lpUrl && (
+          <a
+            href={project.lpUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-gray-500"
+          >
+            LP
+          </a>
+        )}
+
         {project.demoUrl && (
           <a
             href={project.demoUrl}
@@ -49,6 +65,12 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           <span className="text-gray-400">Demo 準備中</span>
         )}
       </div>
+      {project.demoAccessCode && (
+        <p className="mt-3 text-xs text-gray-500">
+          デモ用アクセスコード:{" "}
+          <span className="font-semibold">{project.demoAccessCode}</span>
+        </p>
+      )}
     </article>
   );
 };

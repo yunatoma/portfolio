@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Employee management app list thumbnail</title>
+  <desc id="desc">Employee list screen with a sidebar, search controls, employee cards, and an anonymized user name.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="logo" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <rect width="214" height="900" fill="#ffffff"/>
+  <rect x="214" width="1386" height="46" fill="#ffffff"/>
+  <line x1="214" y1="0" x2="214" y2="900" stroke="#e2e8f0"/>
+  <line x1="214" y1="46" x2="1600" y2="46" stroke="#e2e8f0"/>
+  <path d="M16 12h22l-9 15h18l-28 29 8-22H12z" fill="url(#logo)"/>
+  <text x="43" y="28" fill="#0f172a" font-family="Arial, sans-serif" font-size="14" font-weight="800">株式会社サンプル1</text>
+  <text x="242" y="28" fill="#0f172a" font-family="Arial, sans-serif" font-size="15" font-weight="800">社員一覧</text>
+  <circle cx="1474" cy="23" r="13" fill="#e0f2fe"/>
+  <text x="1469" y="28" fill="#0284c7" font-family="Arial, sans-serif" font-size="13" font-weight="800">ユ</text>
+  <text x="1495" y="28" fill="#334155" font-family="Arial, sans-serif" font-size="13" font-weight="700">ユーザー</text>
+  <g font-family="Arial, sans-serif" font-size="13">
+    <text x="18" y="72" fill="#94a3b8">メニュー</text>
+    <text x="42" y="100" fill="#475569">ダッシュボード</text>
+    <rect x="8" y="112" width="198" height="32" rx="7" fill="#e0f2fe"/>
+    <text x="42" y="134" fill="#0284c7" font-weight="800">社員一覧</text>
+    <text x="42" y="168" fill="#475569">組織図</text>
+    <text x="42" y="202" fill="#475569">マイプロフィール</text>
+    <text x="42" y="236" fill="#475569">社員を登録する</text>
+    <text x="42" y="270" fill="#475569">申請管理</text>
+    <text x="42" y="304" fill="#475569">マスタ設定</text>
+  </g>
+  <g transform="translate(254 82)" font-family="Arial, sans-serif">
+    <text x="0" y="0" fill="#0f172a" font-size="24" font-weight="800">社員一覧</text>
+    <rect x="0" y="32" width="1316" height="34" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="28" y="54" fill="#94a3b8" font-size="13">名前・部署・スキルなどで検索...</text>
+    <text x="0" y="108" fill="#475569" font-size="13" font-weight="700">ステータス</text>
+    <rect x="74" y="88" width="114" height="30" rx="7" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="92" y="108" fill="#0f172a" font-size="13">全て</text>
+  </g>
+  <g transform="translate(254 230)" font-family="Arial, sans-serif" filter="url(#shadow)">
+    <g>
+      <rect width="204" height="236" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+      <circle cx="102" cy="52" r="30" fill="#bae6fd"/>
+      <text x="68" y="106" fill="#0f172a" font-size="16" font-weight="800">サンプル 太郎</text>
+      <text x="82" y="128" fill="#64748b" font-size="12">営業部</text>
+      <rect x="76" y="154" width="52" height="20" rx="10" fill="#dcfce7" stroke="#86efac"/>
+      <text x="87" y="169" fill="#059669" font-size="11" font-weight="700">稼働中</text>
+      <rect x="62" y="188" width="80" height="22" rx="7" fill="#eff6ff" stroke="#93c5fd"/>
+      <text x="78" y="204" fill="#0284c7" font-size="11" font-weight="700">TypeScript</text>
+    </g>
+    <g transform="translate(220 0)">
+      <rect width="204" height="236" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+      <circle cx="102" cy="52" r="30" fill="#ddd6fe"/>
+      <text x="78" y="106" fill="#0f172a" font-size="16" font-weight="800">sample</text>
+      <text x="82" y="128" fill="#64748b" font-size="12">営業部</text>
+      <rect x="76" y="154" width="52" height="20" rx="10" fill="#dcfce7" stroke="#86efac"/>
+      <text x="87" y="169" fill="#059669" font-size="11" font-weight="700">稼働中</text>
+      <rect x="52" y="188" width="58" height="22" rx="7" fill="#eff6ff" stroke="#93c5fd"/>
+      <text x="66" y="204" fill="#0284c7" font-size="11" font-weight="700">Vue.js</text>
+      <rect x="116" y="188" width="58" height="22" rx="7" fill="#eff6ff" stroke="#93c5fd"/>
+      <text x="129" y="204" fill="#0284c7" font-size="11" font-weight="700">Python</text>
+    </g>
+    <g transform="translate(440 0)">
+      <rect width="204" height="236" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+      <circle cx="102" cy="52" r="30" fill="#fecdd3"/>
+      <text x="70" y="106" fill="#0f172a" font-size="16" font-weight="800">山田 花子</text>
+      <text x="72" y="128" fill="#64748b" font-size="12">開発部</text>
+      <rect x="76" y="154" width="52" height="20" rx="10" fill="#dcfce7" stroke="#86efac"/>
+      <text x="87" y="169" fill="#059669" font-size="11" font-weight="700">稼働中</text>
+      <rect x="74" y="188" width="56" height="22" rx="7" fill="#eff6ff" stroke="#93c5fd"/>
+      <text x="88" y="204" fill="#0284c7" font-size="11" font-weight="700">React</text>
+    </g>
+    <g transform="translate(660 0)">
+      <rect width="204" height="236" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+      <circle cx="102" cy="52" r="30" fill="#c4b5fd"/>
+      <text x="70" y="106" fill="#0f172a" font-size="16" font-weight="800">佐藤 一郎</text>
+      <text x="76" y="128" fill="#64748b" font-size="12">総務部</text>
+      <rect x="76" y="154" width="52" height="20" rx="10" fill="#dcfce7" stroke="#86efac"/>
+      <text x="87" y="169" fill="#059669" font-size="11" font-weight="700">稼働中</text>
+    </g>
+    <g transform="translate(880 0)">
+      <rect width="204" height="236" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+      <circle cx="102" cy="52" r="30" fill="#fed7aa"/>
+      <text x="70" y="106" fill="#0f172a" font-size="16" font-weight="800">田中 千尋</text>
+      <text x="82" y="128" fill="#64748b" font-size="12">営業部</text>
+      <rect x="76" y="154" width="52" height="20" rx="10" fill="#dcfce7" stroke="#86efac"/>
+      <text x="87" y="169" fill="#059669" font-size="11" font-weight="700">稼働中</text>
+    </g>
+  </g>
+  <g transform="translate(1344 230)" font-family="Arial, sans-serif" filter="url(#shadow)">
+    <rect width="230" height="340" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="18" y="26" fill="#475569" font-size="13" font-weight="800">絞り込み</text>
+    <rect x="18" y="64" width="194" height="28" rx="8" fill="#e0f2fe"/>
+    <text x="34" y="83" fill="#0284c7" font-size="13" font-weight="800">すべて</text>
+    <text x="182" y="83" fill="#94a3b8" font-size="12">56</text>
+    <text x="38" y="118" fill="#475569" font-size="13">営業部</text>
+    <text x="38" y="148" fill="#475569" font-size="13">開発部</text>
+    <text x="38" y="178" fill="#475569" font-size="13">人事部</text>
+    <text x="38" y="208" fill="#475569" font-size="13">総務部</text>
+  </g>
+</svg>

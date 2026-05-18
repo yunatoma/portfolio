@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Yuna Web Studio portfolio thumbnail</title>
+  <desc id="desc">A pink and white portfolio hero screen with a large title and circular pink illustration.</desc>
+  <defs>
+    <linearGradient id="page" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff1f5"/>
+      <stop offset="0.48" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#fff1f5"/>
+    </linearGradient>
+    <linearGradient id="orb" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f9a8d4"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#fbcfe8" opacity="0.65"/>
+    </pattern>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#page)"/>
+  <rect y="56" width="1600" height="844" fill="url(#dots)" opacity="0.55"/>
+  <rect width="1600" height="56" fill="#ffffff" opacity="0.94"/>
+  <line x1="0" y1="56" x2="1600" y2="56" stroke="#fce7f3"/>
+
+  <text x="364" y="36" fill="#ec4899" font-family="Arial, sans-serif" font-size="20" font-weight="700">Yuna Web Studio</text>
+  <g fill="#475569" font-family="Arial, sans-serif" font-size="14" font-weight="700">
+    <text x="850" y="36">About</text>
+    <text x="918" y="36">Skills</text>
+    <text x="990" y="36">Experience</text>
+    <text x="1094" y="36">Projects</text>
+    <text x="1180" y="36">Articles</text>
+    <text x="1260" y="36">Contact</text>
+  </g>
+
+  <circle cx="1340" cy="155" r="130" fill="#fce7f3" opacity="0.35" filter="url(#soft)"/>
+  <circle cx="170" cy="810" r="130" fill="#fce7f3" opacity="0.35" filter="url(#soft)"/>
+
+  <g transform="translate(344 302)">
+    <rect x="0" y="0" width="108" height="30" rx="15" fill="#ffffff" stroke="#f9a8d4"/>
+    <circle cx="18" cy="15" r="3" fill="#f472b6"/>
+    <text x="30" y="20" fill="#ec4899" font-family="Arial, sans-serif" font-size="12" font-weight="800" letter-spacing="2">ENGINEER</text>
+
+    <text x="0" y="92" fill="#1f2937" font-family="Arial, sans-serif" font-size="54" font-weight="800">Yuna Web Studio</text>
+    <text x="0" y="142" fill="#ec4899" font-family="Arial, sans-serif" font-size="18" font-weight="700">Engineer / Freelance</text>
+
+    <rect x="0" y="180" width="448" height="12" rx="6" fill="#64748b" opacity="0.7"/>
+    <rect x="0" y="204" width="420" height="12" rx="6" fill="#64748b" opacity="0.6"/>
+    <rect x="0" y="228" width="342" height="12" rx="6" fill="#64748b" opacity="0.55"/>
+
+    <rect x="0" y="292" width="126" height="42" rx="21" fill="#ec4899"/>
+    <text x="31" y="319" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="800">Projects</text>
+    <rect x="144" y="292" width="126" height="42" rx="21" fill="#ffffff" stroke="#f472b6"/>
+    <text x="181" y="319" fill="#ec4899" font-family="Arial, sans-serif" font-size="14" font-weight="800">Contact</text>
+  </g>
+
+  <g transform="translate(990 322)">
+    <circle cx="120" cy="120" r="142" fill="none" stroke="#f9a8d4" stroke-width="2" stroke-dasharray="4 4"/>
+    <circle cx="120" cy="120" r="108" fill="#fce7f3" opacity="0.78"/>
+    <circle cx="120" cy="120" r="82" fill="#f9a8d4" opacity="0.78"/>
+    <circle cx="120" cy="120" r="62" fill="url(#orb)" opacity="0.88"/>
+    <circle cx="220" cy="-8" r="7" fill="#f9a8d4"/>
+    <circle cx="-12" cy="74" r="7" fill="#fbcfe8"/>
+    <circle cx="244" cy="244" r="4" fill="#fda4af"/>
+    <circle cx="2" cy="228" r="4" fill="#f472b6"/>
+  </g>
+
+  <text x="780" y="836" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="2">SCROLL</text>
+  <rect x="796" y="852" width="16" height="28" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="803" y="860" width="3" height="8" rx="2" fill="#ec4899"/>
+</svg>

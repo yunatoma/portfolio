@@ -1,4 +1,5 @@
 import { FadeIn } from "@/components/FadeIn";
+import { ProjectThumbnailCarousel } from "@/components/ProjectThumbnailCarousel";
 import { projects } from "@/data/projects";
 
 type ZennArticle = {
@@ -57,7 +58,7 @@ const skills = {
     "Cloud Run",
     "Vercel",
   ],
-  "Database / Search": ["Cloud Firestore", "OpenSearch"],
+  Database: ["Cloud Firestore"],
   Testing: ["Vitest", "Testing Library", "fast-check"],
   Tools: ["Git", "GitLab", "GitHub", "Docker", "CI/CD (GitLab CI)", "ESLint"],
   Design: ["Figma", "Photoshop", "Illustrator", "WordPress", "Studio"],
@@ -308,6 +309,13 @@ export default async function Home() {
                   {/* Top accent line */}
                   <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-pink-300 via-rose-300 to-pink-200 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
+                  {project.thumbnails && (
+                    <ProjectThumbnailCarousel
+                      thumbnails={project.thumbnails}
+                      imageClassName="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  )}
+
                   <h3 className="mb-3 text-xl font-bold text-gray-800">{project.title}</h3>
                   <p className="mb-5 text-sm leading-relaxed text-gray-500">
                     {project.description}
@@ -333,6 +341,16 @@ export default async function Home() {
                         GitHub →
                       </a>
                     )}
+                    {project.lpUrl && (
+                      <a
+                        href={project.lpUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-pink-400 transition-colors hover:text-pink-600"
+                      >
+                        LP →
+                      </a>
+                    )}
                     {project.demoUrl && (
                       <a
                         href={project.demoUrl}
@@ -347,6 +365,14 @@ export default async function Home() {
                       <span className="text-gray-400">Demo 準備中</span>
                     )}
                   </div>
+                  {project.demoAccessCode && (
+                    <p className="mt-3 text-xs font-medium text-gray-400">
+                      デモ用アクセスコード:{" "}
+                      <span className="font-semibold text-gray-500">
+                        {project.demoAccessCode}
+                      </span>
+                    </p>
+                  )}
                 </article>
               </FadeIn>
             ))}

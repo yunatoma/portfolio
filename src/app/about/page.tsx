@@ -44,8 +44,8 @@ export default function AboutPage() {
           </div>
 
           <div className="rounded-xl border border-gray-200 p-5">
-            <h3 className="mb-2 font-bold">Database / Search</h3>
-            <p className="text-gray-600">Cloud Firestore / OpenSearch</p>
+            <h3 className="mb-2 font-bold">Database</h3>
+            <p className="text-gray-600">Cloud Firestore</p>
           </div>
 
           <div className="rounded-xl border border-gray-200 p-5">
