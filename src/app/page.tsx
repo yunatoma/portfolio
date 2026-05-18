@@ -83,6 +83,24 @@ function SectionLabel({ label, title }: { label: string; title: string }) {
   );
 }
 
+function HeroOrb({ className = "" }: { className?: string }) {
+  return (
+    <div
+      className={`animate-hero-enter flex-shrink-0 ${className}`}
+      style={{ animationDelay: "300ms" }}
+    >
+      <div className="animate-rotate-slow absolute inset-0 rounded-full border-2 border-dashed border-pink-200" />
+      <div className="animate-float absolute inset-[18%] rounded-full bg-gradient-to-br from-pink-100 to-pink-200 opacity-70" />
+      <div className="animate-float-reverse absolute inset-[34%] rounded-full bg-gradient-to-br from-pink-200 to-pink-300 opacity-80" />
+      <div className="absolute inset-[44%] rounded-full bg-gradient-to-br from-pink-300 to-pink-400 opacity-80" />
+      <div className="absolute top-[5%] right-[12%] h-3 w-3 rounded-full bg-pink-300 opacity-80" />
+      <div className="absolute bottom-[15%] left-[8%] h-2 w-2 rounded-full bg-pink-400 opacity-70" />
+      <div className="absolute top-1/3 left-0 h-4 w-4 rounded-full bg-pink-200 opacity-60" />
+      <div className="absolute bottom-[8%] right-[10%] h-2 w-2 rounded-full bg-rose-300 opacity-60" />
+    </div>
+  );
+}
+
 export default async function Home() {
   const articles = await fetchZennArticles();
   return (
@@ -106,26 +124,26 @@ export default async function Home() {
 
         <div className="relative mx-auto max-w-5xl w-full flex flex-col md:flex-row items-center gap-12">
           {/* Text */}
-          <div className="flex-1">
-            <div className="animate-hero-enter mb-5 inline-flex items-center gap-2 rounded-full bg-white/80 border border-pink-200 px-4 py-1.5 shadow-sm" style={{ animationDelay: "100ms" }}>
+          <div className="relative flex-1 text-center md:text-left">
+            <div className="animate-hero-enter relative z-10 mb-5 inline-flex items-center gap-2 rounded-full bg-white/80 border border-pink-200 px-4 py-1.5 shadow-sm" style={{ animationDelay: "100ms" }}>
               <span className="animate-blink h-1.5 w-1.5 rounded-full bg-pink-400" />
               <span className="text-xs font-semibold tracking-widest text-pink-500 uppercase">
                 Engineer
               </span>
             </div>
 
-            <h1 className="animate-hero-enter mb-4 text-5xl font-bold leading-tight md:text-6xl text-gray-800" style={{ animationDelay: "200ms" }}>
+            <h1 className="animate-hero-enter relative z-10 mb-4 text-5xl font-bold leading-tight md:text-6xl text-gray-800" style={{ animationDelay: "200ms" }}>
               Yuna Web Studio
             </h1>
-            <p className="animate-hero-enter mb-6 text-lg font-medium text-pink-400" style={{ animationDelay: "300ms" }}>
+            <p className="animate-hero-enter relative z-10 mb-6 text-lg font-medium text-pink-400" style={{ animationDelay: "300ms" }}>
               エンジニア / フリーランス
             </p>
-            <p className="animate-hero-enter mb-10 max-w-lg text-gray-500 leading-relaxed" style={{ animationDelay: "400ms" }}>
+            <p className="animate-hero-enter relative z-10 mx-auto mb-10 max-w-lg text-gray-500 leading-relaxed md:mx-0" style={{ animationDelay: "400ms" }}>
               TypeScript・Vue.jsを中心に約4年の実務経験を持ち、設計から実装・テストまで対応。
               AIツールを活用した効率的な開発フローも取り入れながら、
               丁寧で確実な開発を通じて、チームとプロダクトに貢献するエンジニアです。
             </p>
-            <div className="animate-hero-enter flex gap-4 flex-wrap" style={{ animationDelay: "500ms" }}>
+            <div className="animate-hero-enter relative z-10 flex justify-center gap-4 flex-wrap md:justify-start" style={{ animationDelay: "500ms" }}>
               <a
                 href="#projects"
                 className="rounded-full bg-pink-500 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-200 transition-all hover:bg-pink-600 hover:-translate-y-0.5 hover:shadow-pink-300"
@@ -142,17 +160,7 @@ export default async function Home() {
           </div>
 
           {/* Decorative illustration */}
-          <div className="animate-hero-enter relative flex-shrink-0 w-64 h-64 md:w-80 md:h-80" style={{ animationDelay: "300ms" }}>
-            <div className="animate-rotate-slow absolute inset-0 rounded-full border-2 border-dashed border-pink-200" />
-            <div className="animate-float        absolute inset-6  rounded-full bg-gradient-to-br from-pink-100 to-pink-200 opacity-70" />
-            <div className="animate-float-reverse absolute inset-14 rounded-full bg-gradient-to-br from-pink-200 to-pink-300 opacity-80" />
-            <div className="absolute inset-[4.5rem] rounded-full bg-gradient-to-br from-pink-300 to-pink-400 opacity-80" />
-            {/* Decorative dots */}
-            <div className="absolute top-3  right-10 h-3 w-3 rounded-full bg-pink-300 opacity-80" />
-            <div className="absolute bottom-8 left-5  h-2 w-2 rounded-full bg-pink-400 opacity-70" />
-            <div className="absolute top-1/3 left-1   h-4 w-4 rounded-full bg-pink-200 opacity-60" />
-            <div className="absolute bottom-4 right-6  h-2 w-2 rounded-full bg-rose-300 opacity-60" />
-          </div>
+          <HeroOrb className="relative hidden h-80 w-80 md:block" />
         </div>
 
         {/* Scroll indicator */}
