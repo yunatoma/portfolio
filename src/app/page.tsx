@@ -34,9 +34,32 @@ function formatDate(iso: string) {
 }
 
 const skills = {
-  Frontend: ["TypeScript", "Vue.js", "React", "Next.js", "Nuxt.js", "Astro", "Tailwind CSS"],
-  Backend: ["Java", "Spring Boot", "Python"],
-  Tools: ["Git", "GitLab", "GitHub", "Docker", "CI/CD (GitLab CI)"],
+  Frontend: [
+    "TypeScript",
+    "Vue.js",
+    "React",
+    "Next.js",
+    "Nuxt.js",
+    "Astro",
+    "Vite",
+    "React Router",
+    "Redux Toolkit",
+    "React Hook Form",
+    "Tailwind CSS",
+    "Recharts",
+  ],
+  Backend: ["Java", "Spring Boot", "Node.js", "Express.js", "Python"],
+  Cloud: [
+    "Firebase Hosting",
+    "Firebase Authentication",
+    "Cloud Firestore",
+    "Firebase Storage",
+    "Cloud Run",
+    "Vercel",
+  ],
+  "Database / Search": ["Cloud Firestore", "OpenSearch"],
+  Testing: ["Vitest", "Testing Library", "fast-check"],
+  Tools: ["Git", "GitLab", "GitHub", "Docker", "CI/CD (GitLab CI)", "ESLint"],
   Design: ["Figma", "Photoshop", "Illustrator", "WordPress", "Studio"],
 };
 
@@ -90,13 +113,13 @@ function HeroOrb({ className = "" }: { className?: string }) {
       style={{ animationDelay: "300ms" }}
     >
       <div className="animate-rotate-slow absolute inset-0 rounded-full border-2 border-dashed border-pink-200" />
-      <div className="animate-float absolute inset-[18%] rounded-full bg-gradient-to-br from-pink-100 to-pink-200 opacity-70" />
-      <div className="animate-float-reverse absolute inset-[34%] rounded-full bg-gradient-to-br from-pink-200 to-pink-300 opacity-80" />
-      <div className="absolute inset-[44%] rounded-full bg-gradient-to-br from-pink-300 to-pink-400 opacity-80" />
-      <div className="absolute top-[5%] right-[12%] h-3 w-3 rounded-full bg-pink-300 opacity-80" />
-      <div className="absolute bottom-[15%] left-[8%] h-2 w-2 rounded-full bg-pink-400 opacity-70" />
-      <div className="absolute top-1/3 left-0 h-4 w-4 rounded-full bg-pink-200 opacity-60" />
-      <div className="absolute bottom-[8%] right-[10%] h-2 w-2 rounded-full bg-rose-300 opacity-60" />
+      <div className="animate-float absolute inset-6 rounded-full bg-gradient-to-br from-pink-100 to-pink-200 opacity-70" />
+      <div className="animate-float-reverse absolute inset-14 rounded-full bg-gradient-to-br from-pink-200 to-pink-300 opacity-80" />
+      <div className="absolute inset-[4.5rem] rounded-full bg-gradient-to-br from-pink-300 to-pink-400 opacity-80" />
+      <div className="absolute top-3 right-10 h-3 w-3 rounded-full bg-pink-300 opacity-80" />
+      <div className="absolute bottom-8 left-5 h-2 w-2 rounded-full bg-pink-400 opacity-70" />
+      <div className="absolute top-1/3 left-1 h-4 w-4 rounded-full bg-pink-200 opacity-60" />
+      <div className="absolute bottom-4 right-6 h-2 w-2 rounded-full bg-rose-300 opacity-60" />
     </div>
   );
 }
@@ -278,15 +301,15 @@ export default async function Home() {
               これまでに作成したアプリケーションや学習用プロジェクトです。
             </p>
           </FadeIn>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid items-start gap-6 md:grid-cols-2">
             {projects.map((project, i) => (
               <FadeIn key={project.title} delay={i * 80}>
-                <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-pink-100 bg-white/80 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-100">
+                <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-pink-100 bg-white/80 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-100">
                   {/* Top accent line */}
                   <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-pink-300 via-rose-300 to-pink-200 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                   <h3 className="mb-3 text-xl font-bold text-gray-800">{project.title}</h3>
-                  <p className="mb-5 flex-1 text-sm leading-relaxed text-gray-500">
+                  <p className="mb-5 text-sm leading-relaxed text-gray-500">
                     {project.description}
                   </p>
                   <div className="mb-5 flex flex-wrap gap-2">

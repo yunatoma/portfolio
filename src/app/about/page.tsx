@@ -23,19 +23,42 @@ export default function AboutPage() {
           <div className="rounded-xl border border-gray-200 p-5">
             <h3 className="mb-2 font-bold">Frontend</h3>
             <p className="text-gray-600">
-              TypeScript / React / Next.js / Vue.js / Tailwind CSS
+              TypeScript / React / Next.js / Vue.js / Vite / Redux Toolkit /
+              React Router / Tailwind CSS
             </p>
           </div>
 
           <div className="rounded-xl border border-gray-200 p-5">
             <h3 className="mb-2 font-bold">Backend</h3>
-            <p className="text-gray-600">Java / Spring Boot</p>
+            <p className="text-gray-600">
+              Java / Spring Boot / Node.js / Express.js / Python
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-gray-200 p-5">
+            <h3 className="mb-2 font-bold">Cloud</h3>
+            <p className="text-gray-600">
+              Firebase Hosting / Firebase Authentication / Cloud Firestore /
+              Firebase Storage / Cloud Run / Vercel
+            </p>
+          </div>
+
+          <div className="rounded-xl border border-gray-200 p-5">
+            <h3 className="mb-2 font-bold">Database / Search</h3>
+            <p className="text-gray-600">Cloud Firestore / OpenSearch</p>
+          </div>
+
+          <div className="rounded-xl border border-gray-200 p-5">
+            <h3 className="mb-2 font-bold">Testing</h3>
+            <p className="text-gray-600">
+              Vitest / Testing Library / fast-check
+            </p>
           </div>
 
           <div className="rounded-xl border border-gray-200 p-5">
             <h3 className="mb-2 font-bold">Tools</h3>
             <p className="text-gray-600">
-              Git / GitHub / GitLab / Docker / CI/CD
+              Git / GitHub / GitLab / Docker / CI/CD / ESLint
             </p>
           </div>
 
