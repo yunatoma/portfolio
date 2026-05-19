@@ -112,6 +112,13 @@ const designServices = [
     title: "WordPressサイト制作",
     description:
       "更新しやすいサイト設計や既存サイトの調整にも対応できるよう、WordPressでの制作を学習中です。",
+    url: "https://hushed-sleet.localsite.io/",
+    urlLabel: "制作サイトを見る（一次公開URL）",
+    note: "LOCALの一次公開URLのため、閲覧URLが変更されている場合があります。",
+    credentials: {
+      username: "acoustics",
+      password: "reflective",
+    },
   },
 ];
 
@@ -520,9 +527,9 @@ export default async function Home() {
                     src="/images/design-portforio.webp"
                     width={1600}
                     height={1000}
-                    alt="デザインポートフォリオのサムネイル"
-                    className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
+                  alt="デザインポートフォリオのサムネイル"
+                  className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
                 </a>
                 <a
                   href="https://yuna-design0.studio.site/"
@@ -530,7 +537,7 @@ export default async function Home() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-pink-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-200 transition-all hover:-translate-y-0.5 hover:bg-pink-600 hover:shadow-pink-300"
                 >
-                  デザインポートフォリオを見る →
+                  デザインポートフォリオを見る（STUDIO実装） →
                 </a>
               </div>
             </FadeIn>
@@ -547,6 +554,44 @@ export default async function Home() {
                     <p className="text-sm leading-relaxed text-gray-500">
                       {service.description}
                     </p>
+                    {service.url && (
+                      <div className="mt-4 space-y-2">
+                        <a
+                          href={service.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex text-sm font-semibold text-pink-400 transition-colors hover:text-pink-600"
+                        >
+                          {service.urlLabel} →
+                        </a>
+                        {service.note && (
+                          <p className="text-xs leading-relaxed text-gray-400">
+                            {service.note}
+                          </p>
+                        )}
+                        {service.credentials && (
+                          <details className="rounded-xl border border-pink-100 bg-pink-50/60 px-4 py-3 text-sm text-gray-500">
+                            <summary className="cursor-pointer text-xs font-semibold text-pink-500">
+                              閲覧用ログイン情報
+                            </summary>
+                            <dl className="mt-3 grid gap-2 text-xs">
+                              <div className="flex flex-wrap gap-x-2 gap-y-1">
+                                <dt className="font-semibold text-gray-500">Username</dt>
+                                <dd className="font-mono text-gray-600">
+                                  {service.credentials.username}
+                                </dd>
+                              </div>
+                              <div className="flex flex-wrap gap-x-2 gap-y-1">
+                                <dt className="font-semibold text-gray-500">Password</dt>
+                                <dd className="font-mono text-gray-600">
+                                  {service.credentials.password}
+                                </dd>
+                              </div>
+                            </dl>
+                          </details>
+                        )}
+                      </div>
+                    )}
                   </article>
                 </FadeIn>
               ))}
