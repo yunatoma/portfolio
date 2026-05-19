@@ -1,6 +1,9 @@
+import { BannerSlider } from "@/components/BannerSlider";
 import { FadeIn } from "@/components/FadeIn";
 import { ProjectThumbnailCarousel } from "@/components/ProjectThumbnailCarousel";
 import { projects } from "@/data/projects";
+import { readdir, stat } from "node:fs/promises";
+import path from "node:path";
 import Image from "next/image";
 import type { SVGProps } from "react";
 
@@ -133,6 +136,54 @@ const designKeywords = [
   "LP Design",
 ];
 
+type BannerImage = {
+  src: string;
+  alt: string;
+};
+
+async function getBannerImages(): Promise<BannerImage[]> {
+  return getDesignWorkImages("banner", "バナー制作例");
+}
+
+async function getLpImages(): Promise<BannerImage[]> {
+  const lpImages = await getDesignWorkImages("lp", "LPデザイン制作例");
+
+  return [
+    ...lpImages,
+    {
+      src: await getVersionedPublicImageSrc("design-portforio.webp"),
+      alt: `LPデザイン制作例 ${lpImages.length + 1}`,
+    },
+  ];
+}
+
+async function getDesignWorkImages(
+  prefix: "banner" | "lp",
+  altPrefix: string
+): Promise<BannerImage[]> {
+  const imagesDirectory = path.join(process.cwd(), "public", "images");
+  const filenames = await readdir(imagesDirectory);
+  const pattern = new RegExp(`^${prefix}-.*\\.(?:avif|gif|jpe?g|png|webp)$`, "i");
+
+  const workFilenames = filenames
+    .filter((filename) => pattern.test(filename))
+    .sort((a, b) => a.localeCompare(b, "ja"));
+
+  return Promise.all(
+    workFilenames.map(async (filename, index) => ({
+      src: await getVersionedPublicImageSrc(filename),
+      alt: `${altPrefix} ${index + 1}`,
+    }))
+  );
+}
+
+async function getVersionedPublicImageSrc(filename: string) {
+  const filePath = path.join(process.cwd(), "public", "images", filename);
+  const fileStats = await stat(filePath);
+
+  return `/images/${filename}?v=${Math.round(fileStats.mtimeMs)}`;
+}
+
 function SectionLabel({ label, title }: { label: string; title: string }) {
   return (
     <>
@@ -181,6 +232,12 @@ function GitHubIcon(props: SVGProps<SVGSVGElement>) {
 
 export default async function Home() {
   const articles = await fetchZennArticles();
+  const bannerImages = await getBannerImages();
+  const lpImages = await getLpImages();
+  const designPortfolioImageSrc = await getVersionedPublicImageSrc(
+    "design-portforio.webp"
+  );
+
   return (
     <>
       {/* ── Hero ── */}
@@ -495,56 +552,59 @@ export default async function Home() {
             <SectionLabel label="Design" title="デザイン制作" />
           </FadeIn>
 
-          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="grid gap-10">
             <FadeIn delay={80}>
-              <div>
-                <p className="-mt-4 mb-5 text-lg font-semibold leading-relaxed text-gray-800">
-                  エンジニアとしての実装力に加えて、Webデザイナーとしても活動しています。
-                </p>
-                <p className="mb-7 leading-relaxed text-gray-500">
-                  見た目を整えるだけでなく、情報設計・導線・レスポンシブ対応まで見据えて、
-                  WordPressでのサイト制作も学習中です。
-                  「使いやすく、運用しやすく、伝わる」Web体験を形にします。
-                </p>
-                <div className="mb-8 flex flex-wrap gap-2">
-                  {designKeywords.map((keyword) => (
-                    <span
-                      key={keyword}
-                      className="rounded-full border border-pink-200 bg-white/80 px-3 py-1 text-xs font-medium text-pink-700"
-                    >
-                      {keyword}
-                    </span>
-                  ))}
+              <div className="grid min-w-0 gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-center">
+                <div className="min-w-0">
+                  <p className="-mt-4 mb-5 text-lg font-semibold leading-relaxed text-gray-800 md:text-xl">
+                    エンジニアとしての実装力に加えて、Webデザイナーとしても活動しています。
+                  </p>
+                  <p className="mb-7 leading-relaxed text-gray-500 md:text-lg">
+                    見た目を整えるだけでなく、情報設計・導線・レスポンシブ対応まで見据えて、
+                    WordPressでのサイト制作も学習中です。
+                    「使いやすく、運用しやすく、伝わる」Web体験を形にします。
+                  </p>
+                  <div className="mb-8 flex flex-wrap gap-2">
+                    {designKeywords.map((keyword) => (
+                      <span
+                        key={keyword}
+                        className="rounded-full border border-pink-200 bg-white/80 px-3 py-1 text-xs font-medium text-pink-700"
+                      >
+                        {keyword}
+                      </span>
+                    ))}
+                  </div>
+                  <a
+                    href="https://yuna-design0.studio.site/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex w-fit items-center gap-2 rounded-full bg-pink-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-200 transition-all hover:-translate-y-0.5 hover:bg-pink-600 hover:shadow-pink-300"
+                  >
+                    デザインポートフォリオを見る（STUDIO実装） →
+                  </a>
                 </div>
+
                 <a
                   href="https://yuna-design0.studio.site/"
                   target="_blank"
                   rel="noreferrer"
-                  className="group mb-6 block overflow-hidden rounded-2xl border border-pink-100 bg-white/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-100"
+                  className="group block min-w-0 overflow-hidden rounded-2xl border border-pink-100 bg-white/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-100"
                 >
                   <Image
-                    src="/images/design-portforio.webp"
+                    src={designPortfolioImageSrc}
                     width={1600}
                     height={1000}
-                  alt="デザインポートフォリオのサムネイル"
-                  className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                />
-                </a>
-                <a
-                  href="https://yuna-design0.studio.site/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-pink-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-200 transition-all hover:-translate-y-0.5 hover:bg-pink-600 hover:shadow-pink-300"
-                >
-                  デザインポートフォリオを見る（STUDIO実装） →
+                    alt="デザインポートフォリオのサムネイル"
+                    className="aspect-[16/10] w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
                 </a>
               </div>
             </FadeIn>
 
-            <div className="grid gap-4">
+            <div className="grid w-full min-w-0 gap-5">
               {designServices.map((service, i) => (
                 <FadeIn key={service.title} delay={140 + i * 70}>
-                  <article className="group relative overflow-hidden rounded-2xl border border-pink-100 bg-white/80 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-100">
+                  <article className="group relative min-w-0 overflow-hidden rounded-2xl border border-pink-100 bg-white/80 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-100">
                     <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-pink-300 to-rose-200 opacity-70" />
                     <p className="mb-2 text-xs font-bold tracking-widest text-pink-400 uppercase">
                       0{i + 1}
@@ -553,6 +613,8 @@ export default async function Home() {
                     <p className="text-sm leading-relaxed text-gray-500">
                       {service.description}
                     </p>
+                    {i === 0 && <BannerSlider images={bannerImages} />}
+                    {i === 1 && <BannerSlider images={lpImages} />}
                     {service.url && (
                       <div className="mt-4 space-y-2">
                         <a
