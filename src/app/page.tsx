@@ -1,6 +1,8 @@
 import { FadeIn } from "@/components/FadeIn";
 import { ProjectThumbnailCarousel } from "@/components/ProjectThumbnailCarousel";
 import { projects } from "@/data/projects";
+import Image from "next/image";
+import type { SVGProps } from "react";
 
 type ZennArticle = {
   slug: string;
@@ -95,6 +97,34 @@ const timeline = [
   },
 ];
 
+const designServices = [
+  {
+    title: "バナー / ビジュアル制作",
+    description:
+      "PhotoshopやIllustratorを用いて、告知・SNS・Web掲載向けのクリエイティブを制作します。",
+  },
+  {
+    title: "Webサイト / LPデザイン",
+    description:
+      "目的や導線を整理し、StudioやFigmaを使ってブランドらしさが伝わるページを制作します。",
+  },
+  {
+    title: "WordPressサイト制作",
+    description:
+      "更新しやすいサイト設計や既存サイトの調整にも対応できるよう、WordPressでの制作を学習中です。",
+  },
+];
+
+const designKeywords = [
+  "WordPress",
+  "Figma",
+  "Studio",
+  "Photoshop",
+  "Illustrator",
+  "UI Design",
+  "LP Design",
+];
+
 function SectionLabel({ label, title }: { label: string; title: string }) {
   return (
     <>
@@ -122,6 +152,22 @@ function HeroOrb({ className = "" }: { className?: string }) {
       <div className="absolute top-1/3 left-1 h-4 w-4 rounded-full bg-pink-200 opacity-60" />
       <div className="absolute bottom-4 right-6 h-2 w-2 rounded-full bg-rose-300 opacity-60" />
     </div>
+  );
+}
+
+function MailIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+    </svg>
+  );
+}
+
+function GitHubIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 496 512" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6c-3.3 .3-5.6-1.3-5.6-3.6c0-2 2.3-3.6 5.2-3.6c3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9c2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9c.3 2 2.9 3.3 5.9 2.6c2.9-.7 4.9-2.6 4.6-4.6c-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2c12.8 2.3 17.3-5.6 17.3-12.1c0-6.2-.3-40.4-.3-61.4c0 0-70 15-84.7-29.8c0 0-11.4-29.1-27.8-36.6c0 0-22.9-15.7 1.6-15.4c0 0 24.9 2 38.6 25.8c21.9 38.6 58.6 27.5 72.9 20.9c2.3-16 8.8-27.1 16-33.4c-55.9-6.2-112.3-14.3-112.3-110.5c0-27.5 7.6-41.3 23.6-58.9c-2.6-6.5-11.1-33.3 2.6-67.9c20.9-6.5 69 27 69 27c20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27c13.7 34.7 5.2 61.4 2.6 67.9c16 17.7 25.8 31.5 25.8 58.9c0 96.5-58.9 104.2-114.8 110.5c9.2 7.9 17 22.9 17 46.4c0 33.4-.3 75.5-.3 83.6c0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252C496 113.3 383.5 8 244.8 8z" />
+    </svg>
   );
 }
 
@@ -436,6 +482,79 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ── Design ── */}
+      <section id="design" className="py-24 px-6 bg-gradient-to-b from-white to-pink-50/60">
+        <div className="mx-auto max-w-5xl">
+          <FadeIn>
+            <SectionLabel label="Design" title="デザイン制作" />
+          </FadeIn>
+
+          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            <FadeIn delay={80}>
+              <div>
+                <p className="-mt-4 mb-5 text-lg font-semibold leading-relaxed text-gray-800">
+                  エンジニアとしての実装力に加えて、Webデザイナーとしても活動しています。
+                </p>
+                <p className="mb-7 leading-relaxed text-gray-500">
+                  見た目を整えるだけでなく、情報設計・導線・レスポンシブ対応まで見据えて、
+                  WordPressでのサイト制作も学習中です。
+                  「使いやすく、運用しやすく、伝わる」Web体験を形にします。
+                </p>
+                <div className="mb-8 flex flex-wrap gap-2">
+                  {designKeywords.map((keyword) => (
+                    <span
+                      key={keyword}
+                      className="rounded-full border border-pink-200 bg-white/80 px-3 py-1 text-xs font-medium text-pink-700"
+                    >
+                      {keyword}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href="https://yuna-design0.studio.site/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group mb-6 block overflow-hidden rounded-2xl border border-pink-100 bg-white/80 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-100"
+                >
+                  <Image
+                    src="/images/design-portforio.webp"
+                    width={1600}
+                    height={1000}
+                    alt="デザインポートフォリオのサムネイル"
+                    className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </a>
+                <a
+                  href="https://yuna-design0.studio.site/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-pink-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-200 transition-all hover:-translate-y-0.5 hover:bg-pink-600 hover:shadow-pink-300"
+                >
+                  デザインポートフォリオを見る →
+                </a>
+              </div>
+            </FadeIn>
+
+            <div className="grid gap-4">
+              {designServices.map((service, i) => (
+                <FadeIn key={service.title} delay={140 + i * 70}>
+                  <article className="group relative overflow-hidden rounded-2xl border border-pink-100 bg-white/80 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-100">
+                    <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-pink-300 to-rose-200 opacity-70" />
+                    <p className="mb-2 text-xs font-bold tracking-widest text-pink-400 uppercase">
+                      0{i + 1}
+                    </p>
+                    <h3 className="mb-3 text-lg font-bold text-gray-800">{service.title}</h3>
+                    <p className="text-sm leading-relaxed text-gray-500">
+                      {service.description}
+                    </p>
+                  </article>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Contact ── */}
       <section id="contact" className="py-24 px-6 bg-white">
         <div className="mx-auto max-w-5xl">
@@ -449,14 +568,14 @@ export default async function Home() {
             {[
               {
                 href: "mailto:yuna.aoki.web@gmail.com",
-                icon: "✉️",
+                icon: <MailIcon className="h-6 w-6" />,
                 label: "Email",
                 text: "yuna.aoki.web@gmail.com",
                 delay: 0,
               },
               {
                 href: "https://github.com/yunatoma",
-                icon: "🐙",
+                icon: <GitHubIcon className="h-6 w-6" />,
                 label: "GitHub",
                 text: "github.com/yunatoma",
                 delay: 80,
@@ -470,7 +589,9 @@ export default async function Home() {
                   rel={item.external ? "noreferrer" : undefined}
                   className="group flex items-center gap-4 rounded-2xl border border-pink-100 bg-white px-6 py-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-pink-200 hover:shadow-lg hover:shadow-pink-100"
                 >
-                  <span className="text-2xl">{item.icon}</span>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-pink-50 text-pink-400 transition-colors group-hover:bg-pink-100 group-hover:text-pink-500">
+                    {item.icon}
+                  </span>
                   <div>
                     <p className="mb-0.5 text-xs text-gray-400">{item.label}</p>
                     <p className="text-sm font-semibold text-gray-700 transition-colors group-hover:text-pink-500">
