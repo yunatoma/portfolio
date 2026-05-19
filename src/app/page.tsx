@@ -67,7 +67,7 @@ const skills = {
   Database: ["Cloud Firestore"],
   Testing: ["Vitest", "Testing Library", "fast-check"],
   Tools: ["Git", "GitLab", "GitHub", "Docker", "CI/CD (GitLab CI)", "ESLint"],
-  Design: ["Figma", "Photoshop", "Illustrator", "WordPress", "Studio"],
+  Design: ["Photoshop", "Illustrator", "Figma", "Canva", "WordPress", "Studio"],
 };
 
 const timeline = [
@@ -105,10 +105,10 @@ const designServices = [
   {
     title: "バナー / ビジュアル制作",
     description:
-      "PhotoshopやIllustratorを用いて、告知・SNS・Web掲載向けのクリエイティブを制作します。",
+      "Photoshop、Illustrator、Figma、Canvaを用いて、告知・SNS・Web掲載向けの画像などを制作します。",
   },
   {
-    title: "Webサイト / LPデザイン",
+    title: "LPデザイン / Webサイト",
     description:
       "目的や導線を整理し、StudioやFigmaを使ってブランドらしさが伝わるページを制作します。",
   },
@@ -128,10 +128,11 @@ const designServices = [
 
 const designKeywords = [
   "WordPress",
-  "Figma",
   "Studio",
   "Photoshop",
   "Illustrator",
+  "Figma",
+  "Canva",
   "UI Design",
   "LP Design",
 ];
