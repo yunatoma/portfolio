@@ -7,7 +7,7 @@ export default function AboutPage() {
         <p>
           フロントエンド開発を中心に、Webアプリケーション開発に携わっています。
           TypeScript、Vue.js、React、Next.jsを用いた画面実装や、
-          既存機能の改修、不具合調査、UI改善などを行っています。
+          既存機能の改修、不具合調査、UI改善、AWSを含むクラウド活用などを行っています。
         </p>
 
         <p>
@@ -39,7 +39,7 @@ export default function AboutPage() {
             <h3 className="mb-2 font-bold">Cloud</h3>
             <p className="text-gray-600">
               Firebase Hosting / Firebase Authentication / Cloud Firestore /
-              Firebase Storage / Cloud Run / Vercel
+              Firebase Storage / Cloud Run / Vercel / AWS
             </p>
           </div>
 

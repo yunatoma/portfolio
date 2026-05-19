@@ -53,6 +53,7 @@ const skills = {
   ],
   Backend: ["Java", "Spring Boot", "Node.js", "Express.js", "Python"],
   Cloud: [
+    "AWS",
     "Firebase Hosting",
     "Firebase Authentication",
     "Cloud Firestore",
@@ -205,7 +206,7 @@ export default async function Home() {
             <div className="animate-hero-enter relative z-10 mb-5 inline-flex items-center gap-2 rounded-full bg-white/80 border border-pink-200 px-4 py-1.5 shadow-sm" style={{ animationDelay: "100ms" }}>
               <span className="animate-blink h-1.5 w-1.5 rounded-full bg-pink-400" />
               <span className="text-xs font-semibold tracking-widest text-pink-500 uppercase">
-                Engineer
+                Engineer / Designer
               </span>
             </div>
 
@@ -213,12 +214,12 @@ export default async function Home() {
               Yuna Web Studio
             </h1>
             <p className="animate-hero-enter relative z-10 mb-6 text-lg font-medium text-pink-400" style={{ animationDelay: "300ms" }}>
-              エンジニア / フリーランス
+              エンジニア / デザイナー / フリーランス
             </p>
             <p className="animate-hero-enter relative z-10 mx-auto mb-10 max-w-lg text-gray-500 leading-relaxed md:mx-0" style={{ animationDelay: "400ms" }}>
               TypeScript・Vue.jsを中心に約4年の実務経験を持ち、設計から実装・テストまで対応。
-              AIツールを活用した効率的な開発フローも取り入れながら、
-              丁寧で確実な開発を通じて、チームとプロダクトに貢献するエンジニアです。
+              AWSなどのクラウド活用やAIツールを取り入れた効率的な開発フローに加え、
+              デザイン制作まで含めてチームとプロダクトに貢献します。
             </p>
             <div className="animate-hero-enter relative z-10 flex justify-center gap-4 flex-wrap md:justify-start" style={{ animationDelay: "500ms" }}>
               <a
@@ -298,9 +299,7 @@ export default async function Home() {
                   </div>
                   {category === "Design" && (
                     <a
-                      href="https://yuna-design0.studio.site/"
-                      target="_blank"
-                      rel="noreferrer"
+                      href="#design"
                       className="mt-5 inline-flex text-sm font-semibold text-pink-400 transition-colors hover:text-pink-600"
                     >
                       Webデザイナーとしても活動中です →
