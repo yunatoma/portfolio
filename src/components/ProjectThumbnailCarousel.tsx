@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRef } from "react";
+import type { SVGProps } from "react";
 
 type Thumbnail = {
   src: string;
@@ -13,6 +14,34 @@ type ProjectThumbnailCarouselProps = {
   sizes?: string;
   imageClassName?: string;
 };
+
+function ChevronLeftIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M16.5 20L7.5 12l9-8"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2.5"
+      />
+    </svg>
+  );
+}
+
+function ChevronRightIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M7.5 4l9 8-9 8"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2.5"
+      />
+    </svg>
+  );
+}
 
 export const ProjectThumbnailCarousel = ({
   thumbnails,
@@ -42,17 +71,17 @@ export const ProjectThumbnailCarousel = ({
             type="button"
             aria-label="前のサムネイル"
             onClick={() => scroll("prev")}
-            className="absolute left-3 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-pink-200 bg-white/90 text-lg font-bold text-pink-500 shadow-sm backdrop-blur-sm transition hover:bg-pink-50"
+            className="absolute left-3 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-pink-200 bg-white/90 text-pink-500 shadow-sm backdrop-blur-sm transition hover:bg-pink-50"
           >
-            &lt;
+            <ChevronLeftIcon className="h-5 w-5" />
           </button>
           <button
             type="button"
             aria-label="次のサムネイル"
             onClick={() => scroll("next")}
-            className="absolute right-3 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-pink-200 bg-white/90 text-lg font-bold text-pink-500 shadow-sm backdrop-blur-sm transition hover:bg-pink-50"
+            className="absolute right-3 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-pink-200 bg-white/90 text-pink-500 shadow-sm backdrop-blur-sm transition hover:bg-pink-50"
           >
-            &gt;
+            <ChevronRightIcon className="h-5 w-5" />
           </button>
         </>
       )}

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRef } from "react";
+import type { SVGProps } from "react";
 
 type BannerImage = {
   src: string;
@@ -11,6 +12,34 @@ type BannerImage = {
 type BannerSliderProps = {
   images: BannerImage[];
 };
+
+function ChevronLeftIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M16.5 20L7.5 12l9-8"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2.5"
+      />
+    </svg>
+  );
+}
+
+function ChevronRightIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M7.5 4l9 8-9 8"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2.5"
+      />
+    </svg>
+  );
+}
 
 export function BannerSlider({ images }: BannerSliderProps) {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -35,17 +64,17 @@ export function BannerSlider({ images }: BannerSliderProps) {
             type="button"
             aria-label="前のバナーを見る"
             onClick={() => scroll("prev")}
-            className="absolute left-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-pink-200 bg-white/95 text-base font-bold text-pink-500 shadow-sm backdrop-blur-sm transition hover:bg-pink-50"
+            className="absolute left-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-pink-200 bg-white/95 text-pink-500 shadow-sm backdrop-blur-sm transition hover:bg-pink-50"
           >
-            &lt;
+            <ChevronLeftIcon className="h-5 w-5" />
           </button>
           <button
             type="button"
             aria-label="次のバナーを見る"
             onClick={() => scroll("next")}
-            className="absolute right-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-pink-200 bg-white/95 text-base font-bold text-pink-500 shadow-sm backdrop-blur-sm transition hover:bg-pink-50"
+            className="absolute right-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-pink-200 bg-white/95 text-pink-500 shadow-sm backdrop-blur-sm transition hover:bg-pink-50"
           >
-            &gt;
+            <ChevronRightIcon className="h-5 w-5" />
           </button>
         </>
       )}
