@@ -103,19 +103,22 @@ const timeline = [
 
 const designServices = [
   {
-    title: "バナー / ビジュアル制作",
-    description:
-      "Photoshop、Illustrator、Figma、Canvaを用いて、告知・SNS・Web掲載向けの画像などを制作します。",
-  },
-  {
     title: "LPデザイン / Webサイト",
     description:
       "目的や導線を整理し、StudioやFigmaを使ってブランドらしさが伝わるページを制作します。",
+    worksUrl: "https://yuna-design0.studio.site/#works",
+  },
+  {
+    title: "バナー / ビジュアル制作",
+    description:
+      "Photoshop、Illustrator、Figma、Canvaを用いて、告知・SNS・Web掲載向けの画像などを制作します。",
+    worksUrl:
+      "https://www.foriio.com/hautree0927/categories/%E3%83%90%E3%83%8A%E3%83%BC",
   },
   {
     title: "WordPressサイト制作",
     description:
-      "更新しやすいサイト設計や既存サイトの調整にも対応できるよう、WordPressでの制作を学習中です。",
+      "更新しやすいサイト設計や既存サイトの調整にも対応できるよう、WordPressで制作します。",
     url: "https://wp.yuna-art.com",
     urlLabel: "制作サイトを見る",
     credentials: {
@@ -505,7 +508,7 @@ export default async function Home() {
                   </p>
                   <p className="mb-7 leading-relaxed text-gray-500 md:text-lg">
                     見た目を整えるだけでなく、情報設計・導線・レスポンシブ対応まで見据えて、
-                    WordPressでのサイト制作も学習中です。
+                    WordPressでのサイト制作にも対応します。
                     「使いやすく、運用しやすく、伝わる」Web体験を形にします。
                   </p>
                   <div className="mb-8 flex flex-wrap gap-2">
@@ -549,6 +552,15 @@ export default async function Home() {
               {designServices.map((service, i) => (
                 <FadeIn key={service.title} delay={140 + i * 70}>
                   <article className="group relative min-w-0 overflow-hidden rounded-2xl border border-pink-100 bg-white/80 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-100">
+                    {service.worksUrl && (
+                      <a
+                        href={service.worksUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`${service.title}の制作実績を見る`}
+                        className="absolute inset-0 z-10 rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+                      />
+                    )}
                     <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-pink-300 to-rose-200 opacity-70" />
                     <p className="mb-2 text-xs font-bold tracking-widest text-pink-400 uppercase">
                       0{i + 1}
@@ -557,8 +569,8 @@ export default async function Home() {
                     <p className="text-sm leading-relaxed text-gray-500">
                       {service.description}
                     </p>
-                    {i === 0 && <BannerSlider images={bannerImages} />}
-                    {i === 1 && <BannerSlider images={lpImages} />}
+                    {i === 0 && <BannerSlider images={lpImages} />}
+                    {i === 1 && <BannerSlider images={bannerImages} />}
                     {service.url && (
                       <div className="mt-4 space-y-2">
                         <a

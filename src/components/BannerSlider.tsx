@@ -64,7 +64,7 @@ export function BannerSlider({ images }: BannerSliderProps) {
             type="button"
             aria-label="前のバナーを見る"
             onClick={() => scroll("prev")}
-            className="absolute left-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-pink-200 bg-white/95 text-pink-500 shadow-sm backdrop-blur-sm transition hover:bg-pink-50"
+            className="absolute left-2 top-1/2 z-20 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-pink-200 bg-white/95 text-pink-500 shadow-sm backdrop-blur-sm transition hover:bg-pink-50"
           >
             <ChevronLeftIcon className="h-5 w-5" />
           </button>
@@ -72,7 +72,7 @@ export function BannerSlider({ images }: BannerSliderProps) {
             type="button"
             aria-label="次のバナーを見る"
             onClick={() => scroll("next")}
-            className="absolute right-2 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-pink-200 bg-white/95 text-pink-500 shadow-sm backdrop-blur-sm transition hover:bg-pink-50"
+            className="absolute right-2 top-1/2 z-20 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-pink-200 bg-white/95 text-pink-500 shadow-sm backdrop-blur-sm transition hover:bg-pink-50"
           >
             <ChevronRightIcon className="h-5 w-5" />
           </button>
