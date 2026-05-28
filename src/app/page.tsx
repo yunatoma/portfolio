@@ -116,12 +116,11 @@ const designServices = [
     title: "WordPressサイト制作",
     description:
       "更新しやすいサイト設計や既存サイトの調整にも対応できるよう、WordPressでの制作を学習中です。",
-    url: "https://hushed-sleet.localsite.io/",
-    urlLabel: "制作サイトを見る（一次公開URL）",
-    note: "LOCALの一次公開URLのため、閲覧URLが変更されている場合があります。",
+    url: "https://wp.yuna-art.com",
+    urlLabel: "制作サイトを見る",
     credentials: {
-      username: "acoustics",
-      password: "reflective",
+      username: "5atrm1D7YX",
+      password: "5atrm1D7YX",
     },
   },
 ];
