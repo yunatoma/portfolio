@@ -101,7 +101,15 @@ const timeline = [
   },
 ];
 
-const designServices = [
+const designServices: {
+  title: string;
+  description: string;
+  worksUrl?: string;
+  url?: string;
+  urlLabel?: string;
+  note?: string;
+  credentials?: { username: string; password: string };
+}[] = [
   {
     title: "LPデザイン / Webサイト",
     description:
