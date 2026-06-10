@@ -64,8 +64,6 @@ const skills = {
     "Cloud Run",
     "Vercel",
   ],
-  Database: ["Cloud Firestore"],
-  Testing: ["Vitest", "Testing Library", "fast-check"],
   Tools: ["Git", "GitLab", "GitHub", "Docker", "CI/CD (GitLab CI)", "ESLint"],
   Design: ["Photoshop", "Illustrator", "Figma", "Canva", "WordPress", "Studio"],
 };

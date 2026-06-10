@@ -44,18 +44,6 @@ export default function AboutPage() {
           </div>
 
           <div className="rounded-xl border border-gray-200 p-5">
-            <h3 className="mb-2 font-bold">Database</h3>
-            <p className="text-gray-600">Cloud Firestore</p>
-          </div>
-
-          <div className="rounded-xl border border-gray-200 p-5">
-            <h3 className="mb-2 font-bold">Testing</h3>
-            <p className="text-gray-600">
-              Vitest / Testing Library / fast-check
-            </p>
-          </div>
-
-          <div className="rounded-xl border border-gray-200 p-5">
             <h3 className="mb-2 font-bold">Tools</h3>
             <p className="text-gray-600">
               Git / GitHub / GitLab / Docker / CI/CD / ESLint
