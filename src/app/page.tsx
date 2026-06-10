@@ -432,7 +432,10 @@ export default async function Home() {
                   {project.thumbnails && (
                     <ProjectThumbnailCarousel
                       thumbnails={project.thumbnails}
-                      imageClassName="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      imageClassName={
+                        project.imageClassName ??
+                        "object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      }
                     />
                   )}
 
@@ -492,6 +495,39 @@ export default async function Home() {
                         {project.demoAccessCode}
                       </span>
                     </p>
+                  )}
+                  {project.adminUrl && (
+                    <div className="mt-3">
+                      <a
+                        href={project.adminUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm font-semibold text-pink-400 transition-colors hover:text-pink-600"
+                      >
+                        管理者画面 →
+                      </a>
+                      {project.adminCredentials && (
+                        <details className="mt-2 rounded-xl border border-pink-100 bg-pink-50/60 px-4 py-3 text-sm text-gray-500">
+                          <summary className="cursor-pointer text-xs font-semibold text-pink-500">
+                            管理者ログイン情報
+                          </summary>
+                          <dl className="mt-3 grid gap-2 text-xs">
+                            <div className="flex flex-wrap gap-x-2 gap-y-1">
+                              <dt className="font-semibold text-gray-500">Email</dt>
+                              <dd className="font-mono text-gray-600">
+                                {project.adminCredentials.email}
+                              </dd>
+                            </div>
+                            <div className="flex flex-wrap gap-x-2 gap-y-1">
+                              <dt className="font-semibold text-gray-500">Password</dt>
+                              <dd className="font-mono text-gray-600">
+                                {project.adminCredentials.password}
+                              </dd>
+                            </div>
+                          </dl>
+                        </details>
+                      )}
+                    </div>
                   )}
                 </article>
               </FadeIn>

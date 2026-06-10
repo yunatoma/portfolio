@@ -11,6 +11,9 @@ export type Project = {
   demoUrl?: string;
   demoAccessCode?: string;
   demoStatus?: "preparing";
+  adminUrl?: string;
+  adminCredentials?: { email: string; password: string };
+  imageClassName?: string;
 };
 
 export const projects: Project[] = [
@@ -62,6 +65,54 @@ export const projects: Project[] = [
     lpUrl: "https://employee-profile-lp.vercel.app/",
     demoUrl: "https://employee-profile-app-184e1.web.app/",
     demoAccessCode: "demo2026",
+  },
+  {
+    title: "さくらこもれび ホームページ（CMS付き）",
+    description:
+      "全国に展開する保育園運営団体「桜のこもれびキッズランド」の公式サイト（仮）です。管理者が画像・テキストをブラウザから更新できるよう、独自のCMSを自作したことがポイントです。Nuxt.js + Firebase（Firestore / Authentication / Storage）で構築し、Vercelにデプロイしています。",
+    technologies: [
+      "Nuxt.js",
+      "TypeScript",
+      "Firebase",
+      "Firestore",
+      "Firebase Auth",
+      "Firebase Storage",
+      "Vercel",
+    ],
+    thumbnails: [
+      {
+        src: "/images/sakura-komorebi-thumbnail.png",
+        alt: "さくらこもれびキッズランドのトップページ",
+      },
+      {
+        src: "/images/komorebi-01.png",
+        alt: "たいせつにしていること（Motto）ページ",
+      },
+      {
+        src: "/images/komorebi-02.png",
+        alt: "お知らせページ",
+      },
+      {
+        src: "/images/komorebi-03.png",
+        alt: "こもれびだよりページ",
+      },
+      {
+        src: "/images/komorebi-admin01.png",
+        alt: "管理画面 おたより管理",
+      },
+      {
+        src: "/images/komorebi-admin-02.png",
+        alt: "管理画面 おたより編集",
+      },
+    ],
+    demoUrl: "https://sakura-komorebi-hp.vercel.app/",
+    adminUrl: "https://sakura-komorebi-hp.vercel.app/admin/loguin",
+    adminCredentials: {
+      email: "employee.profile.app.test1@gmail.com",
+      password: "PNBTodJPNjbnFjXwJa",
+    },
+    imageClassName:
+      "object-cover object-top blur-[2px] transition-transform duration-500 group-hover:scale-[1.03]",
   },
   {
     title: "ポートフォリオサイト",
