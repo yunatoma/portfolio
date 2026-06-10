@@ -105,6 +105,7 @@ export const projects: Project[] = [
         alt: "管理画面 おたより編集",
       },
     ],
+    githubUrl: "https://github.com/yunatoma/sakura-komorebi-HP",
     demoUrl: "https://sakura-komorebi-hp.vercel.app/",
     adminUrl: "https://sakura-komorebi-hp.vercel.app/admin/loguin",
     adminCredentials: {
