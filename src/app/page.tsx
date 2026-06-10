@@ -428,6 +428,15 @@ export default async function Home() {
                 <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-pink-100 bg-white/80 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-100">
                   {/* Top accent line */}
                   <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-pink-300 via-rose-300 to-pink-200 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${project.title}のデモサイトを見る`}
+                      className="absolute inset-0 z-10 rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300"
+                    />
+                  )}
 
                   {project.thumbnails && (
                     <ProjectThumbnailCarousel
@@ -453,7 +462,7 @@ export default async function Home() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-5 text-sm font-semibold">
+                  <div className="relative z-20 flex gap-5 text-sm font-semibold">
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}
@@ -489,7 +498,7 @@ export default async function Home() {
                     )}
                   </div>
                   {project.demoAccessCode && (
-                    <p className="mt-3 text-xs font-medium text-gray-400">
+                    <p className="relative z-20 mt-3 text-xs font-medium text-gray-400">
                       デモ用アクセスコード:{" "}
                       <span className="font-semibold text-gray-500">
                         {project.demoAccessCode}
@@ -497,7 +506,7 @@ export default async function Home() {
                     </p>
                   )}
                   {project.adminUrl && (
-                    <div className="mt-3">
+                    <div className="relative z-20 mt-3">
                       <a
                         href={project.adminUrl}
                         target="_blank"

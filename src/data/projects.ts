@@ -107,7 +107,7 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/yunatoma/sakura-komorebi-HP",
     demoUrl: "https://sakura-komorebi-hp.vercel.app/",
-    adminUrl: "https://sakura-komorebi-hp.vercel.app/admin/loguin",
+    adminUrl: "https://sakura-komorebi-hp.vercel.app/admin/login",
     adminCredentials: {
       email: "employee.profile.app.test1@gmail.com",
       password: "PNBTodJPNjbnFjXwJa",
