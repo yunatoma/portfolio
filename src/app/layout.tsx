@@ -9,6 +9,20 @@ export const metadata: Metadata = {
   title: "Yuna Web Studio | Portfolio",
   description:
     "フロントエンドエンジニア Yuna Web Studioのポートフォリオサイトです。TypeScript・Vue.js・React・Next.jsを中心に、設計から実装まで一貫して対応します。",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
+  ),
+  openGraph: {
+    title: "Yuna Web Studio | Portfolio",
+    description:
+      "フロントエンドエンジニア Yuna Web Studioのポートフォリオサイトです。TypeScript・Vue.js・React・Next.jsを中心に、設計から実装まで一貫して対応します。",
+    images: [{ url: "/images/ogp.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/ogp.png"],
+  },
   robots: {
     index: false,
     follow: false,

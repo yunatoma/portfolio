@@ -48,23 +48,15 @@ const skills = {
     "Nuxt.js",
     "Astro",
     "Vite",
-    "React Router",
-    "Redux Toolkit",
-    "React Hook Form",
     "Tailwind CSS",
-    "Recharts",
   ],
-  Backend: ["Java", "Spring Boot", "Node.js", "Express.js", "Python"],
+  Backend: ["Java", "Spring Boot", "Node.js", "Python"],
   Cloud: [
     "AWS",
-    "Firebase Hosting",
-    "Firebase Authentication",
     "Cloud Firestore",
-    "Firebase Storage",
-    "Cloud Run",
     "Vercel",
   ],
-  Tools: ["Git", "GitLab", "GitHub", "Docker", "CI/CD (GitLab CI)", "ESLint"],
+  Tools: ["Git", "GitLab", "GitHub", "Docker", "CI/CD (GitLab CI)"],
   Design: ["Photoshop", "Illustrator", "Figma", "Canva", "WordPress", "Studio"],
 };
 
@@ -154,6 +146,13 @@ async function getBannerImages(): Promise<BannerImage[]> {
   return getDesignWorkImages("banner", "バナー制作例");
 }
 
+async function getWordPressImages(): Promise<BannerImage[]> {
+  const images = await getDesignWorkImages("valentine", "WordPressサイト制作例");
+  const top = images.find((img) => img.src.includes("valentine-rose.png"));
+  const rest = images.filter((img) => !img.src.includes("valentine-rose.png"));
+  return top ? [top, ...rest] : images;
+}
+
 async function getLpImages(): Promise<BannerImage[]> {
   const lpImages = await getDesignWorkImages("lp", "LPデザイン制作例");
 
@@ -167,7 +166,7 @@ async function getLpImages(): Promise<BannerImage[]> {
 }
 
 async function getDesignWorkImages(
-  prefix: "banner" | "lp",
+  prefix: "banner" | "lp" | "valentine",
   altPrefix: string
 ): Promise<BannerImage[]> {
   const imagesDirectory = path.join(process.cwd(), "public", "images");
@@ -243,6 +242,7 @@ export default async function Home() {
   const articles = await fetchZennArticles();
   const bannerImages = await getBannerImages();
   const lpImages = await getLpImages();
+  const wordpressImages = await getWordPressImages();
   const designPortfolioImageSrc = await getVersionedPublicImageSrc(
     "design-portforio.webp"
   );
@@ -446,7 +446,12 @@ export default async function Home() {
                     />
                   )}
 
-                  <h3 className="mb-3 text-xl font-bold text-gray-800">{project.title}</h3>
+                  <div className="mb-3">
+                    <h3 className="text-xl font-bold text-gray-800">{project.title}</h3>
+                    {project.subtitle && (
+                      <p className="mt-0.5 text-xs font-medium text-pink-400">{project.subtitle}</p>
+                    )}
+                  </div>
                   <p className="mb-5 text-sm leading-relaxed text-gray-500">
                     {project.description}
                   </p>
@@ -622,6 +627,7 @@ export default async function Home() {
                     </p>
                     {i === 0 && <BannerSlider images={lpImages} />}
                     {i === 1 && <BannerSlider images={bannerImages} />}
+                    {i === 2 && <BannerSlider images={wordpressImages} />}
                     {service.url && (
                       <div className="mt-4 space-y-2">
                         <a

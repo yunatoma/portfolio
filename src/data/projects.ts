@@ -1,5 +1,6 @@
 export type Project = {
   title: string;
+  subtitle?: string;
   description: string;
   technologies: string[];
   thumbnails?: {
@@ -18,16 +19,13 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "人材管理SaaS風アプリ",
+    title: "ひとナビ",
+    subtitle: "人材管理SaaSアプリ",
     description:
       "社員情報の一覧・検索・登録・編集、認証、プロフィール画像管理、AIチャット機能に対応した人材管理SaaS風アプリです。Firebaseへのデプロイ、マルチテナント構造を前提に設計しています。",
     technologies: [
       "React",
       "TypeScript",
-      "Vite",
-      "Redux Toolkit",
-      "React Router",
-      "React Hook Form",
       "Tailwind CSS",
       "Firebase",
       "Firestore",
@@ -35,7 +33,6 @@ export const projects: Project[] = [
       "Firebase Storage",
       "Cloud Run",
       "Node.js",
-      "Express.js",
       "AIチャット",
       "マルチテナント",
     ],
