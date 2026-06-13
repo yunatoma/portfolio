@@ -10,8 +10,7 @@ export const metadata: Metadata = {
   description:
     "フロントエンドエンジニア Yuna Web Studioのポートフォリオサイトです。TypeScript・Vue.js・React・Next.jsを中心に、設計から実装まで一貫して対応します。",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ??
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-chi-eosin-43.vercel.app"
   ),
   openGraph: {
     title: "Yuna Web Studio | Portfolio",
